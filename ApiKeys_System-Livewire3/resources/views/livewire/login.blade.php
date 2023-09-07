@@ -1,190 +1,384 @@
 <div>
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <!-- ========== MAIN CONTENT ========== -->
-    <div class="position-fixed top-0 end-0 start-0 bg-img-start"
-        style="height: 32rem; background-image: url(assets/svg/components/card-6.svg);">
-        <!-- Shape -->
-        <div class="shape shape-bottom zi-1">
-            <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                viewBox="0 0 1921 273">
-                <polygon fill="#fff" points="0,273 1921,273 1921,0 " />
-            </svg>
-        </div>
-        <!-- End Shape -->
-    </div>
+    <!-- Mirrored from htmlstream.com/preview/front-dashboard-v2.1.1/authentication-login-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jul 2023 19:57:27 GMT -->
 
-    <!-- Content -->
-    <div class="container py-5 py-sm-7">
-        <a class="d-flex justify-content-center mb-5" href="index.html">
-            <img class="zi-2" src="assets/svg/logos/logo.svg" alt="Image Description" style="width: 8rem;">
-        </a>
+    <head>
+        <!-- Required Meta Tags Always Come First -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <div class="mx-auto" style="max-width: 30rem;">
-            <!-- Card -->
-            <div class="card card-lg mb-5">
-                <div class="card-body">
-                    <!-- Form -->
-                    <form class="js-validate needs-validation" novalidate>
-                        <div class="text-center">
-                            <div class="mb-5">
-                                <h1 class="display-5">Create your account</h1>
-                                <p>Already have an account? <a class="link"
-                                        href="authentication-login-basic.html">Sign in here</a></p>
-                            </div>
+        <!-- Title -->
+        <title>Basic Log In | Front - Admin &amp; Dashboard Template</title>
 
-                            <div class="d-grid mb-4">
-                                <a class="btn btn-white btn-lg" href="#">
-                                    <span class="d-flex justify-content-center align-items-center">
-                                        <img class="avatar avatar-xss me-2" src="assets/svg/brands/google-icon.svg"
-                                            alt="Image Description">
-                                        Sign up with Google
-                                    </span>
-                                </a>
-                            </div>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
 
-                            <span class="divider-center text-muted mb-4">OR</span>
-                        </div>
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
 
-                        <label class="form-label" for="fullNameSrEmail">Full name</label>
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/css/vendor.min.css">
 
-                        <!-- Form -->
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <!-- Form -->
-                                <div class="mb-4">
-                                    <input type="text" class="form-control form-control-lg" name="fullName"
-                                        id="fullNameSrEmail" placeholder="Mark" aria-label="Mark" required>
-                                    <span class="invalid-feedback">Please enter your first name.</span>
-                                </div>
-                                <!-- End Form -->
-                            </div>
+        <!-- CSS Front Template -->
+        <link rel="stylesheet" href="assets/css/theme.minc619.css?v=1.0">
 
-                            <div class="col-sm-6">
-                                <!-- Form -->
-                                <div class="mb-4">
-                                    <input type="text" class="form-control form-control-lg" placeholder="Williams"
-                                        aria-label="Williams" required>
-                                    <span class="invalid-feedback">Please enter your last name.</span>
-                                </div>
-                                <!-- End Form -->
-                            </div>
-                        </div>
-                        <!-- End Form -->
+        <link rel="preload" href="assets/css/theme.min.css" data-hs-appearance="default" as="style">
+        <link rel="preload" href="assets/css/theme-dark.min.css" data-hs-appearance="dark" as="style">
 
-                        <!-- Form -->
-                        <div class="mb-4">
-                            <label class="form-label" for="signupSrEmail">Your email</label>
-                            <input type="email" class="form-control form-control-lg" name="email" id="signupSrEmail"
-                                placeholder="Markwilliams@site.com" aria-label="Markwilliams@site.com" required>
-                            <span class="invalid-feedback">Please enter a valid email address.</span>
-                        </div>
-                        <!-- End Form -->
+        <style data-hs-appearance-onload-styles>
+            * {
+                transition: unset !important;
+            }
 
-                        <!-- Form -->
-                        <div class="mb-4">
-                            <label class="form-label" for="signupSrPassword">Password</label>
+            body {
+                opacity: 0;
+            }
+        </style>
 
-                            <div class="input-group input-group-merge" data-hs-validation-validate-class>
-                                <input type="password" class="js-toggle-password form-control form-control-lg"
-                                    name="password" id="signupSrPassword" placeholder="8+ characters required"
-                                    aria-label="8+ characters required" required minlength="8"
-                                    data-hs-toggle-password-options='{
-                           "target": [".js-toggle-password-target-1", ".js-toggle-password-target-2"],
-                           "defaultClass": "bi-eye-slash",
-                           "showClass": "bi-eye",
-                           "classChangeTarget": ".js-toggle-password-show-icon-1"
-                         }'>
-                                <a class="js-toggle-password-target-1 input-group-append input-group-text"
-                                    href="javascript:;">
-                                    <i class="js-toggle-password-show-icon-1 bi-eye"></i>
-                                </a>
-                            </div>
+        <script>
+            window.hs_config = {
+                "autopath": "@@autopath",
+                "deleteLine": "hs-builder:delete",
+                "deleteLine:build": "hs-builder:build-delete",
+                "deleteLine:dist": "hs-builder:dist-delete",
+                "previewMode": false,
+                "startPath": "/index.html",
+                "vars": {
+                    "themeFont": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
+                    "version": "?v=1.0"
+                },
+                "layoutBuilder": {
+                    "extend": {
+                        "switcherSupport": true
+                    },
+                    "header": {
+                        "layoutMode": "default",
+                        "containerMode": "container-fluid"
+                    },
+                    "sidebarLayout": "default"
+                },
+                "themeAppearance": {
+                    "layoutSkin": "default",
+                    "sidebarSkin": "default",
+                    "styles": {
+                        "colors": {
+                            "primary": "#377dff",
+                            "transparent": "transparent",
+                            "white": "#fff",
+                            "dark": "132144",
+                            "gray": {
+                                "100": "#f9fafc",
+                                "900": "#1e2022"
+                            }
+                        },
+                        "font": "Inter"
+                    }
+                },
+                "languageDirection": {
+                    "lang": "en"
+                },
+                "skipFilesFromBundle": {
+                    "dist": ["assets/js/hs.theme-appearance.js", "assets/js/hs.theme-appearance-charts.js",
+                        "assets/js/demo.js"
+                    ],
+                    "build": ["assets/css/theme.css",
+                        "assets/vendor/hs-navbar-vertical-aside/dist/hs-navbar-vertical-aside-mini-cache.js",
+                        "assets/js/demo.js", "assets/css/theme-dark.html", "assets/css/docs.css",
+                        "assets/vendor/icon-set/style.html", "assets/js/hs.theme-appearance.js",
+                        "assets/js/hs.theme-appearance-charts.js",
+                        "node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.html",
+                        "assets/js/demo.js"
+                    ]
+                },
+                "minifyCSSFiles": ["assets/css/theme.css", "assets/css/theme-dark.css"],
+                "copyDependencies": {
+                    "dist": {
+                        "*assets/js/theme-custom.js": ""
+                    },
+                    "build": {
+                        "*assets/js/theme-custom.js": "",
+                        "node_modules/bootstrap-icons/font/*fonts/**": "assets/css"
+                    }
+                },
+                "buildFolder": "",
+                "replacePathsToCDN": {},
+                "directoryNames": {
+                    "src": "./src",
+                    "dist": "./dist",
+                    "build": "./build"
+                },
+                "fileNames": {
+                    "dist": {
+                        "js": "theme.min.js",
+                        "css": "theme.min.css"
+                    },
+                    "build": {
+                        "css": "theme.min.css",
+                        "js": "theme.min.js",
+                        "vendorCSS": "vendor.min.css",
+                        "vendorJS": "vendor.min.js"
+                    }
+                },
+                "fileTypes": "jpg|png|svg|mp4|webm|ogv|json"
+            }
+            window.hs_config.gulpRGBA = (p1) => {
+                const options = p1.split(',')
+                const hex = options[0].toString()
+                const transparent = options[1].toString()
 
-                            <span class="invalid-feedback">Your password is invalid. Please try again.</span>
-                        </div>
-                        <!-- End Form -->
+                var c;
+                if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+                    c = hex.substring(1).split('');
+                    if (c.length == 3) {
+                        c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+                    }
+                    c = '0x' + c.join('');
+                    return 'rgba(' + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',') + ',' + transparent + ')';
+                }
+                throw new Error('Bad Hex');
+            }
+            window.hs_config.gulpDarken = (p1) => {
+                const options = p1.split(',')
 
-                        <!-- Form -->
-                        <div class="mb-4">
-                            <label class="form-label" for="signupSrConfirmPassword">Confirm password</label>
+                let col = options[0].toString()
+                let amt = -parseInt(options[1])
+                var usePound = false
 
-                            <div class="input-group input-group-merge" data-hs-validation-validate-class>
-                                <input type="password" class="js-toggle-password form-control form-control-lg"
-                                    name="confirmPassword" id="signupSrConfirmPassword"
-                                    placeholder="8+ characters required" aria-label="8+ characters required" required
-                                    minlength="8"
-                                    data-hs-toggle-password-options='{
-                           "target": [".js-toggle-password-target-1", ".js-toggle-password-target-2"],
-                           "defaultClass": "bi-eye-slash",
-                           "showClass": "bi-eye",
-                           "classChangeTarget": ".js-toggle-password-show-icon-2"
-                         }'>
-                                <a class="js-toggle-password-target-2 input-group-append input-group-text"
-                                    href="javascript:;">
-                                    <i class="js-toggle-password-show-icon-2 bi-eye"></i>
-                                </a>
-                            </div>
+                if (col[0] == "#") {
+                    col = col.slice(1)
+                    usePound = true
+                }
+                var num = parseInt(col, 16)
+                var r = (num >> 16) + amt
+                if (r > 255) {
+                    r = 255
+                } else if (r < 0) {
+                    r = 0
+                }
+                var b = ((num >> 8) & 0x00FF) + amt
+                if (b > 255) {
+                    b = 255
+                } else if (b < 0) {
+                    b = 0
+                }
+                var g = (num & 0x0000FF) + amt
+                if (g > 255) {
+                    g = 255
+                } else if (g < 0) {
+                    g = 0
+                }
+                return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16)
+            }
+            window.hs_config.gulpLighten = (p1) => {
+                const options = p1.split(',')
 
-                            <span class="invalid-feedback">Password does not match the confirm password.</span>
-                        </div>
-                        <!-- End Form -->
+                let col = options[0].toString()
+                let amt = parseInt(options[1])
+                var usePound = false
 
-                        <!-- Form Check -->
-                        <div class="form-check mb-4">
-                            <input class="form-check-input" type="checkbox" value="" id="termsCheckbox" required>
-                            <label class="form-check-label" for="termsCheckbox">
-                                I accept the <a href="#">Terms and Conditions</a>
-                            </label>
-                            <span class="invalid-feedback">Please accept our Terms and Conditions.</span>
-                        </div>
-                        <!-- End Form Check -->
+                if (col[0] == "#") {
+                    col = col.slice(1)
+                    usePound = true
+                }
+                var num = parseInt(col, 16)
+                var r = (num >> 16) + amt
+                if (r > 255) {
+                    r = 255
+                } else if (r < 0) {
+                    r = 0
+                }
+                var b = ((num >> 8) & 0x00FF) + amt
+                if (b > 255) {
+                    b = 255
+                } else if (b < 0) {
+                    b = 0
+                }
+                var g = (num & 0x0000FF) + amt
+                if (g > 255) {
+                    g = 255
+                } else if (g < 0) {
+                    g = 0
+                }
+                return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16)
+            }
+        </script>
+    </head>
 
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg">Create an account</button>
+    <body>
 
-                            <button type="submit" class="btn btn-link">
-                                or Start your 30-day trial <i class="bu-chevron-right"></i>
-                            </button>
-                        </div>
-                    </form>
-                    <!-- End Form -->
+        <script src="assets/js/hs.theme-appearance.js"></script>
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main id="content" role="main" class="main">
+            <div class="position-fixed top-0 end-0 start-0 bg-img-start"
+                style="height: 32rem; background-image: url(assets/svg/components/card-6.svg);">
+                <!-- Shape -->
+                <div class="shape shape-bottom zi-1">
+                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        viewBox="0 0 1921 273">
+                        <polygon fill="#fff" points="0,273 1921,273 1921,0 " />
+                    </svg>
                 </div>
+                <!-- End Shape -->
             </div>
-            <!-- End Card -->
 
-            <!-- Footer -->
-            <div class="position-relative text-center zi-1">
-                <small class="text-cap text-body mb-4">Trusted by the world's best teams</small>
+            <!-- Content -->
+            <div class="container py-5 py-sm-7">
+                <a class="d-flex justify-content-center mb-5" href="index.html">
+                    <img class="zi-2" src="assets/svg/logos/logo.svg" alt="Image Description" style="width: 8rem;">
+                </a>
 
-                <div class="w-85 mx-auto">
-                    <div class="row justify-content-between">
-                        <div class="col">
-                            <img class="img-fluid" src="assets/svg/brands/gitlab-gray.svg" alt="Logo">
+                <div class="mx-auto" style="max-width: 30rem;">
+                    <!-- Card -->
+                    <div class="card card-lg mb-5">
+                        <div class="card-body">
+                            <!-- Form -->
+                            <form class="js-validate needs-validation" novalidate>
+                                <div class="text-center">
+                                    <div class="mb-5">
+                                        <h1 class="display-5">Sign in</h1>
+                                        <p>Don't have an account yet? <a class="link"
+                                                href="authentication-signup-basic.html">Sign up here</a></p>
+                                    </div>
+
+                                    <div class="d-grid mb-4">
+                                        <a class="btn btn-white btn-lg" href="#">
+                                            <span class="d-flex justify-content-center align-items-center">
+                                                <img class="avatar avatar-xss me-2"
+                                                    src="assets/svg/brands/google-icon.svg" alt="Image Description">
+                                                Sign in with Google
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                    <span class="divider-center text-muted mb-4">OR</span>
+                                </div>
+
+                                <!-- Form -->
+                                <div class="mb-4">
+                                    <label class="form-label" for="signinSrEmail">Your email</label>
+                                    <input type="email" class="form-control form-control-lg" name="email"
+                                        id="signinSrEmail" tabindex="1" placeholder="email@address.com"
+                                        aria-label="email@address.com" required>
+                                    <span class="invalid-feedback">Please enter a valid email address.</span>
+                                </div>
+                                <!-- End Form -->
+
+                                <!-- Form -->
+                                <div class="mb-4">
+                                    <label class="form-label w-100" for="signupSrPassword" tabindex="0">
+                                        <span class="d-flex justify-content-between align-items-center">
+                                            <span>Password</span>
+                                            <a class="form-label-link mb-0"
+                                                href="authentication-reset-password-basic.html">Forgot Password?</a>
+                                        </span>
+                                    </label>
+
+                                    <div class="input-group input-group-merge" data-hs-validation-validate-class>
+                                        <input type="password" class="js-toggle-password form-control form-control-lg"
+                                            name="password" id="signupSrPassword" placeholder="8+ characters required"
+                                            aria-label="8+ characters required" required minlength="8"
+                                            data-hs-toggle-password-options='{
+                           "target": "#changePassTarget",
+                           "defaultClass": "bi-eye-slash",
+                           "showClass": "bi-eye",
+                           "classChangeTarget": "#changePassIcon"
+                         }'>
+                                        <a id="changePassTarget" class="input-group-append input-group-text"
+                                            href="javascript:;">
+                                            <i id="changePassIcon" class="bi-eye"></i>
+                                        </a>
+                                    </div>
+
+                                    <span class="invalid-feedback">Please enter a valid password.</span>
+                                </div>
+                                <!-- End Form -->
+
+                                <!-- Form Check -->
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="termsCheckbox">
+                                    <label class="form-check-label" for="termsCheckbox">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <!-- End Form Check -->
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+                                </div>
+                            </form>
+                            <!-- End Form -->
                         </div>
-                        <!-- End Col -->
-
-                        <div class="col">
-                            <img class="img-fluid" src="assets/svg/brands/fitbit-gray.svg" alt="Logo">
-                        </div>
-                        <!-- End Col -->
-
-                        <div class="col">
-                            <img class="img-fluid" src="assets/svg/brands/flow-xo-gray.svg" alt="Logo">
-                        </div>
-                        <!-- End Col -->
-
-                        <div class="col">
-                            <img class="img-fluid" src="assets/svg/brands/layar-gray.svg" alt="Logo">
-                        </div>
-                        <!-- End Col -->
                     </div>
-                    <!-- End Row -->
+                    <!-- End Card -->
+
+                    <!-- Footer -->
+                    <div class="position-relative text-center zi-1">
+                        <small class="text-cap text-body mb-4">Trusted by the world's best teams</small>
+
+                        <div class="w-85 mx-auto">
+                            <div class="row justify-content-between">
+                                <div class="col">
+                                    <img class="img-fluid" src="assets/svg/brands/gitlab-gray.svg" alt="Logo">
+                                </div>
+                                <!-- End Col -->
+
+                                <div class="col">
+                                    <img class="img-fluid" src="assets/svg/brands/fitbit-gray.svg" alt="Logo">
+                                </div>
+                                <!-- End Col -->
+
+                                <div class="col">
+                                    <img class="img-fluid" src="assets/svg/brands/flow-xo-gray.svg" alt="Logo">
+                                </div>
+                                <!-- End Col -->
+
+                                <div class="col">
+                                    <img class="img-fluid" src="assets/svg/brands/layar-gray.svg" alt="Logo">
+                                </div>
+                                <!-- End Col -->
+                            </div>
+                            <!-- End Row -->
+                        </div>
+                    </div>
+                    <!-- End Footer -->
                 </div>
             </div>
-            <!-- End Footer -->
-        </div>
-    </div>
-    <!-- End Content -->
+            <!-- End Content -->
+        </main>
+        <!-- ========== END MAIN CONTENT ========== -->
+
+        <!-- JS Implementing Plugins -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- JS Front -->
+        <script src="assets/js/theme.min.js"></script>
+
+        <!-- JS Plugins Init. -->
+        <script>
+            (function() {
+                window.onload = function() {
+                    // INITIALIZATION OF BOOTSTRAP VALIDATION
+                    // =======================================================
+                    HSBsValidation.init('.js-validate', {
+                        onSubmit: data => {
+                            data.event.preventDefault()
+                            alert('Submited')
+                        }
+                    })
 
 
+                    // INITIALIZATION OF TOGGLE PASSWORD
+                    // =======================================================
+                    new HSTogglePassword('.js-toggle-password')
+                }
+            })()
+        </script>
+    </body>
+
+    <!-- Mirrored from htmlstream.com/preview/front-dashboard-v2.1.1/authentication-login-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jul 2023 19:57:28 GMT -->
+
+    </html>
 </div>
