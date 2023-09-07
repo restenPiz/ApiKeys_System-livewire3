@@ -1,13 +1,12 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Livewire\Login;
 use Illuminate\Support\Facades\Route;
 
 //!Inicio das rotas do meu sistema
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Login::class)->name('login');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
