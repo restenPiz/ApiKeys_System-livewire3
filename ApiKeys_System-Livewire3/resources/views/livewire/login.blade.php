@@ -228,7 +228,7 @@
             <div class="container py-5 py-sm-7">
                 {{--<a class="d-flex justify-content-center mb-5" href="index.html">
                     <img class="zi-2" src="assets/svg/logos/logo.svg" alt="Image Description" style="width: 8rem;">
-                </a>--}}
+                </a>--}}</br></br></br></br>
 
                 <div class="mx-auto" style="max-width: 30rem;">
                     <!-- Card -->
