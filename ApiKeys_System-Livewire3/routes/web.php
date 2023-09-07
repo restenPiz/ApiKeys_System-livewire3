@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 //!Inicio das rotas do meu sistema
 
 Route::get('/', function () {
-    return view('livewire.login');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {

@@ -43,16 +43,16 @@
 
     {{--Incluindo componente possuindo toda a tela de login--}}
 
-    @include('livewire.login')
+    @livewire('login')
 
     {{--Fim da inclusao do componente--}}
 
-  <script src="assets/js/hs.theme-appearance.js"></script>
+  <script src="/assets/js/hs.theme-appearance.js"></script>
 
-  <script src="assets/js/vendor.min.js"></script>
+  <script src="/assets/js/vendor.min.js"></script>
 
   <!-- JS Front -->
-  <script src="assets/js/theme.min.js"></script>
+  <script src="/assets/js/theme.min.js"></script>
 
   <!-- JS Plugins Init. -->
   <script>
