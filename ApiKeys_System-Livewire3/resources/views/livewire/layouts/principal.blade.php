@@ -42,9 +42,9 @@
 <body>
 
     {{--Incluindo componente possuindo toda a tela de login--}}
-
+    <main>
     @livewire('login')
-
+    </main>
     {{--Fim da inclusao do componente--}}
 
   <script src="/assets/js/hs.theme-appearance.js"></script>

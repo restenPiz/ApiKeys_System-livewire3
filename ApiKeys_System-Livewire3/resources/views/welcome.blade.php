@@ -43,8 +43,9 @@
 
     {{--Incluindo componente possuindo toda a tela de login--}}
 
-    @livewire('login')
-
+    </main>
+        @livewire('login')
+    </main>
     {{--Fim da inclusao do componente--}}
 
   <script src="/assets/js/hs.theme-appearance.js"></script>
@@ -53,6 +54,9 @@
 
   <!-- JS Front -->
   <script src="/assets/js/theme.min.js"></script>
+
+  <script src="{{ mix('js/app.js') }}"></script>
+
 
   <!-- JS Plugins Init. -->
   <script>
