@@ -235,15 +235,14 @@
                     <div class="card card-lg mb-5">
                         <div class="card-body">
                             <!-- Form -->
-                            <form class="js-validate needs-validation" novalidate>
                                 <div class="text-center">
                                     <div class="mb-5">
                                         <h1 class="display-5">Sign in</h1>
-                                        <p>Don't have an account yet? <a class="link"
-                                                href="authentication-signup-basic.html">Sign up here</a></p>
+                                        <p>Don't have an account yet? <button wire:click="signUp" class="link">Sign up here</button></p>
                                     </div>
                                 </div>
 
+                            <form class="js-validate needs-validation" novalidate>
                                 <!-- Form -->
                                 <div class="mb-4">
                                     <label class="form-label" for="signinSrEmail">Your email</label>

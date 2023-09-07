@@ -21,4 +21,9 @@ class Login extends Component
 
         return redirect()->intended(RouteServiceProvider::HOME);
     }
+    //*Metodo para redirecionar para a tela de signup
+    public function signUp()
+    {
+        return view('livewire.signup');
+    }
 }
