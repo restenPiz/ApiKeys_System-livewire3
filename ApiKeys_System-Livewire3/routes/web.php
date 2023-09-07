@@ -10,8 +10,6 @@ Route::get('/', function () {
     return view('livewire.login');
 });
 
-Route::get('/login', Login::class)->name('login');
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

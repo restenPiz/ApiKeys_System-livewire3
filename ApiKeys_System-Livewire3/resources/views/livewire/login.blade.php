@@ -226,9 +226,9 @@
 
             <!-- Content -->
             <div class="container py-5 py-sm-7">
-                <a class="d-flex justify-content-center mb-5" href="index.html">
+                {{--<a class="d-flex justify-content-center mb-5" href="index.html">
                     <img class="zi-2" src="assets/svg/logos/logo.svg" alt="Image Description" style="width: 8rem;">
-                </a>
+                </a>--}}
 
                 <div class="mx-auto" style="max-width: 30rem;">
                     <!-- Card -->
@@ -242,18 +242,6 @@
                                         <p>Don't have an account yet? <a class="link"
                                                 href="authentication-signup-basic.html">Sign up here</a></p>
                                     </div>
-
-                                    <div class="d-grid mb-4">
-                                        <a class="btn btn-white btn-lg" href="#">
-                                            <span class="d-flex justify-content-center align-items-center">
-                                                <img class="avatar avatar-xss me-2"
-                                                    src="assets/svg/brands/google-icon.svg" alt="Image Description">
-                                                Sign in with Google
-                                            </span>
-                                        </a>
-                                    </div>
-
-                                    <span class="divider-center text-muted mb-4">OR</span>
                                 </div>
 
                                 <!-- Form -->
@@ -314,36 +302,6 @@
                     </div>
                     <!-- End Card -->
 
-                    <!-- Footer -->
-                    <div class="position-relative text-center zi-1">
-                        <small class="text-cap text-body mb-4">Trusted by the world's best teams</small>
-
-                        <div class="w-85 mx-auto">
-                            <div class="row justify-content-between">
-                                <div class="col">
-                                    <img class="img-fluid" src="assets/svg/brands/gitlab-gray.svg" alt="Logo">
-                                </div>
-                                <!-- End Col -->
-
-                                <div class="col">
-                                    <img class="img-fluid" src="assets/svg/brands/fitbit-gray.svg" alt="Logo">
-                                </div>
-                                <!-- End Col -->
-
-                                <div class="col">
-                                    <img class="img-fluid" src="assets/svg/brands/flow-xo-gray.svg" alt="Logo">
-                                </div>
-                                <!-- End Col -->
-
-                                <div class="col">
-                                    <img class="img-fluid" src="assets/svg/brands/layar-gray.svg" alt="Logo">
-                                </div>
-                                <!-- End Col -->
-                            </div>
-                            <!-- End Row -->
-                        </div>
-                    </div>
-                    <!-- End Footer -->
                 </div>
             </div>
             <!-- End Content -->
