@@ -21,7 +21,7 @@
     <div class="container py-5 py-sm-7">
         {{-- <a class="d-flex justify-content-center mb-5" href="index.html">
                         <img class="zi-2" src="assets/svg/logos/logo.svg" alt="Image Description" style="width: 8rem;">
-                    </a> --}}</br></br></br></br>
+                    </a> --}}
 
         <div class="mx-auto" style="max-width: 30rem;">
             <!-- Card -->
@@ -38,6 +38,12 @@
 
                     <form class="js-validate needs-validation" novalidate>
                         <!-- Form -->
+                        <div class="mb-4">
+                            <label class="form-label" for="signinSrEmail">Your name</label>
+                            <input type="text" class="form-control form-control-lg" name="name" id="signinSrEmail"
+                                tabindex="1" placeholder="Your name" required>
+                            <span class="invalid-feedback">Please enter a valid name.</span>
+                        </div>
                         <div class="mb-4">
                             <label class="form-label" for="signinSrEmail">Your email</label>
                             <input type="email" class="form-control form-control-lg" name="email" id="signinSrEmail"
@@ -59,6 +65,29 @@
                             <div class="input-group input-group-merge" data-hs-validation-validate-class>
                                 <input type="password" class="js-toggle-password form-control form-control-lg"
                                     name="password" id="signupSrPassword" placeholder="8+ characters required"
+                                    aria-label="8+ characters required" required minlength="8"
+                                    data-hs-toggle-password-options='{
+                            "target": "#changePassTarget",
+                            "defaultClass": "bi-eye-slash",
+                            "showClass": "bi-eye",
+                            "classChangeTarget": "#changePassIcon"
+                            }'>
+                                <a id="changePassTarget" class="input-group-append input-group-text"
+                                    href="javascript:;">
+                                    <i id="changePassIcon" class="bi-eye"></i>
+                                </a>
+                            </div>
+
+                            <label class="form-label w-100" for="signupSrPassword" tabindex="0">
+                                <span class="d-flex justify-content-between align-items-center">
+                                    <span>Password Confirmation</span>
+                                    <a class="form-label-link mb-0"
+                                        href="authentication-reset-password-basic.html">Forgot Password?</a>
+                                </span>
+                            </label>
+                            <div class="input-group input-group-merge" data-hs-validation-validate-class>
+                                <input type="password" class="js-toggle-password form-control form-control-lg"
+                                    name="password_confirmation" id="signupSrPassword" placeholder="8+ characters required"
                                     aria-label="8+ characters required" required minlength="8"
                                     data-hs-toggle-password-options='{
                             "target": "#changePassTarget",
