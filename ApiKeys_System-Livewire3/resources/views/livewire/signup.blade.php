@@ -1,5 +1,8 @@
 <div>
 
+    @if($redirectToSignIn)
+        @livewire('signIn')
+    @else
     {{-- Inicio do conteudo da pagina de registro --}}
 
     <div class="position-fixed top-0 end-0 start-0 bg-img-start"
@@ -28,7 +31,7 @@
                     <div class="text-center">
                         <div class="mb-5">
                             <h1 class="display-5">Sign Out</h1>
-                            <p>Don't have an account ? <a href="#" wire:click="signUp" class="link">Sign in
+                            <p>Don't have an account ? <a href="#" wire:click="signIn" class="link">Sign in
                                     here</a></p>
                         </div>
                     </div>
@@ -95,5 +98,5 @@
     </div>
 
     {{-- Fim do conteudo da pagina de registro --}}
-
+    @endif
 </div>
