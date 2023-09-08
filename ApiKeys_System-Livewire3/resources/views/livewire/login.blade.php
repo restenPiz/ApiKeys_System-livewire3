@@ -23,7 +23,7 @@
                 <div class="card-body">
                     <!-- Form -->
                     <div class="text-center">
-                        <div class="mb-5">
+                        <div class="mb-5">  
                             <h1 class="display-5">Sign in</h1>
                             <p>Don't have an account yet? <a href="#" wire:click="signUp" class="link">Sign up
                                     here</a></p>
