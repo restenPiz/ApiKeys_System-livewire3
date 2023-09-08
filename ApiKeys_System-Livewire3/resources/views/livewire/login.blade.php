@@ -91,4 +91,12 @@
         </div>
     </div>
 
+    {{--Inicio do metodo de redirecionamento--}}
+
+    @if($redirectToSignUp)
+        @livewire('signUp')
+    @endif
+
+    {{--Fim do metodo de redirecionamento--}}
+
 </div>

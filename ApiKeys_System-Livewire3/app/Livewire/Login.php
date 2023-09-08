@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class Login extends Component
 {
+    public $redirectToSignUp=false;
     public function render()
     {
         return view('livewire.login')->layout('layouts.app');
@@ -24,6 +25,6 @@ class Login extends Component
     //*Metodo para redirecionar para a tela de signup
     public function signUp()
     {
-        return redirect()->route('signUp');
+        $this->redirectToSignUp=true;
     }
 }
