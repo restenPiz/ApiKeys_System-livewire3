@@ -27,7 +27,11 @@ class Signup extends Component
     }
     public function store()
     {
-        
+        $this->validate([
+            'name'=>'required',
+            'email'=>'required|email',
+            'password'=>'required',
+        ]);
 
         $user = User::create([
             'name' => $this->name,
