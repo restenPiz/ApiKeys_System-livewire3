@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Illuminate\Http\Request;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Livewire\Component;
@@ -13,10 +14,10 @@ class Login extends Component
     public $redirectToDash = false;
     public $request;
 
-    // Método para inicializar a propriedade $request
-    private function initializeRequest()
+    public function __construct(Request $request)
     {
-        $this->request = new LoginRequest();
+        parent::__construct();
+        $this->request = $request;
     }
 
     public function render()
@@ -26,11 +27,11 @@ class Login extends Component
 
     public function store()
     {
-        $this->initializeRequest(); // Inicialize a propriedade $request antes de usá-la
+        $this->request->validate([
+            // Coloque suas regras de validação aqui
+        ]);
 
-        $this->request->authenticate();
-
-        $this->request->session()->regenerate();
+        // Outro código relacionado ao login...
 
         $this->redirectToDash = true;
     }
@@ -38,8 +39,6 @@ class Login extends Component
     // Método para redirecionar para a tela de signup
     public function signUp()
     {
-        $this->initializeRequest(); // Inicialize a propriedade $request antes de usá-la
-
         $this->redirectToSignUp = true;
     }
 }
