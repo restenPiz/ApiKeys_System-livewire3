@@ -1,7 +1,7 @@
 <div>
 
     @if($redirectToSignIn)
-        @livewire('signIn')
+        @livewire('login')
     @else
     {{-- Inicio do conteudo da pagina de registro --}}
 
