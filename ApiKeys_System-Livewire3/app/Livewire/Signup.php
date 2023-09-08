@@ -15,6 +15,7 @@ use Livewire\Component;
 
 class Signup extends Component
 {
+    public $name,$email,$password, $user;
     public $redirectToSignIn=false;
     public function render()
     {
@@ -26,27 +27,17 @@ class Signup extends Component
     }
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+        
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-        ]);
+        ]); 
 
         event(new Registered($user));
 
         Auth::login($user);
 
-        $this->request->name='';
-        $this->request->email='';
-        $this->request->password='';
-        $this->request->password_confirmation='';
-
-        return redirect(RouteServiceProvider::HOME);
     }
 }
