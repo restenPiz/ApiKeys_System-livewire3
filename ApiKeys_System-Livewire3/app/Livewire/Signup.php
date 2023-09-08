@@ -8,6 +8,6 @@ class Signup extends Component
 {
     public function render()
     {
-        return view('livewire.signup');
+        return view('livewire.signup')->layout('layouts.app');
     }
 }
