@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-/**
- * Summary of Login
- */
 class Login extends Component
 {
     public $redirectToSignUp = false;
