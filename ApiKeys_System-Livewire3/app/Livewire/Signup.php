@@ -27,6 +27,8 @@ class Signup extends Component
     }
     public function store()
     {
+        //*Inicio do metodo de validacao
+        
         $this->validate([
             'name'=>'required',
             'email'=>'required|email',
