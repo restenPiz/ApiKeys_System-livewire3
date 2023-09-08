@@ -25,14 +25,14 @@ class Signup extends Component
     {
         $this->redirectToSignIn=true;
     }
-    public function store(Request $request): RedirectResponse
+    public function store()
     {
         
 
         $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'name' => $this->name,
+            'email' => $this->email,
+            'password' => Hash::make($this->password),
         ]); 
 
         event(new Registered($user));
