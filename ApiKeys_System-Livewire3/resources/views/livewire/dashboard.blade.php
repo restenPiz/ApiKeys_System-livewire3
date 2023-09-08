@@ -1,3 +1,3 @@
 <div>
-    <h1>Ola Mundo</h1>
+    <h1></h1>
 </div>

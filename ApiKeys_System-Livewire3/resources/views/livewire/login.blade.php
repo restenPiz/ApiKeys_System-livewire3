@@ -35,7 +35,7 @@
                             </div>
                         </div>
 
-                        <form class="js-validate needs-validation" novalidate wire:submit="store">
+                        <form class="js-validate needs-validation" wire:submit="store" novalidate>
                             <!-- Form -->
                             <div class="mb-4">
                                 <label class="form-label" for="signinSrEmail">Your email</label>
@@ -72,15 +72,6 @@
                                 </div>
 
                                 <span class="invalid-feedback">Please enter a valid password.</span>
-                            </div>
-                            <!-- End Form -->
-
-                            <!-- Form Check -->
-                            <div class="form-check mb-4">
-                                <input class="form-check-input" type="checkbox" value="" id="termsCheckbox">
-                                <label class="form-check-label" for="termsCheckbox">
-                                    Remember me
-                                </label>
                             </div>
                             <!-- End Form Check -->
 
