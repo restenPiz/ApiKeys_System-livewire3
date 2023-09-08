@@ -11,7 +11,7 @@ class Login extends Component
 {
     public function render()
     {
-        return view('livewire.login')->layout('welcome');
+        return view('livewire.login')->layout('layouts.app');
     }
     public function store(LoginRequest $request): RedirectResponse
     {

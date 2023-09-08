@@ -11,12 +11,23 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/css/vendor.min.css">
+
+        <!-- CSS Front Template -->
+        <link rel="stylesheet" href="assets/css/theme.minc619.css?v=1.0">
+
+        <link rel="preload" href="assets/css/theme.min.css" data-hs-appearance="default" as="style">
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+           {{-- @include('layouts.navigation') --}}
 
             <!-- Page Heading -->
             @if (isset($header))
@@ -32,5 +43,38 @@
                 {{ $slot }}
             </main>
         </div>
+
+        {{--Inicio dos links do javascript--}}
+        
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- JS Front -->
+        <script src="assets/js/theme.min.js"></script>
+        
+        <script src="assets/js/hs.theme-appearance.js"></script>
+
+        <!-- JS Plugins Init. -->
+        <script>
+            (function() {
+            window.onload = function () {
+                // INITIALIZATION OF BOOTSTRAP VALIDATION
+                // =======================================================
+                HSBsValidation.init('.js-validate', {
+                onSubmit: data => {
+                    data.event.preventDefault()
+                    alert('Submited')
+                }
+                })
+
+
+                // INITIALIZATION OF TOGGLE PASSWORD
+                // =======================================================
+                new HSTogglePassword('.js-toggle-password')
+            }
+            })()
+        </script>
+
+        @livewireScripts
+
     </body>
 </html>
