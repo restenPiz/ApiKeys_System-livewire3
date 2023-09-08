@@ -11,17 +11,12 @@ class Login extends Component
 {
     public $redirectToSignUp=false;
     public $redirectToDash=false;
-    public $request; // Removendo a tipagem no nível da propriedade
-    public function __construct()
-    {
-        // Inicializando a propriedade $request no construtor
-        $this->request = new LoginRequest();
-    }
+    
     public function render()
     {
         return view('livewire.login')->layout('layouts.app');
     }
-    public function store()
+    public function store(LoginRequest $request)
     {
         $this->request->authenticate();
 

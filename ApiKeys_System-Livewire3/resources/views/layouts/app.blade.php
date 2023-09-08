@@ -53,27 +53,6 @@
         
         <script src="assets/js/hs.theme-appearance.js"></script>
 
-        <!-- JS Plugins Init. -->
-        <script>
-            (function() {
-            window.onload = function () {
-                // INITIALIZATION OF BOOTSTRAP VALIDATION
-                // =======================================================
-                HSBsValidation.init('.js-validate', {
-                onSubmit: data => {
-                    data.event.preventDefault()
-                    alert('Submited')
-                }
-                })
-
-
-                // INITIALIZATION OF TOGGLE PASSWORD
-                // =======================================================
-                new HSTogglePassword('.js-toggle-password')
-            }
-            })()
-        </script>
-
         @livewireScripts
 
     </body>
