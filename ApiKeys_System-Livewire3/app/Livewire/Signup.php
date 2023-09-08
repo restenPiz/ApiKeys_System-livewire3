@@ -3,14 +3,8 @@
 namespace App\Livewire;
 
 use App\Models\User;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules;
-use Illuminate\View\View;
 use Livewire\Component;
 
 class Signup extends Component
@@ -28,7 +22,7 @@ class Signup extends Component
     public function store()
     {
         //*Inicio do metodo de validacao
-        
+
         $this->validate([
             'name'=>'required',
             'email'=>'required|email',
