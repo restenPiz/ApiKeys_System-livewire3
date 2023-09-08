@@ -2,38 +2,41 @@
 
 namespace App\Livewire;
 
-use Illuminate\Http\Request;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
+/**
+ * Summary of Login
+ */
 class Login extends Component
 {
     public $redirectToSignUp = false;
     public $redirectToDash = false;
-    public $request;
 
-    public function __construct(Request $request)
-    {
-        parent::__construct();
-        $this->request = $request;
-    }
+    public $email, $password;
 
     public function render()
     {
         return view('livewire.login')->layout('layouts.app');
     }
-
     public function store()
     {
-        $this->request->validate([
-            // Coloque suas regras de validação aqui
-        ]);
+        $credentials = [
+            'email' => $this->email,
+            'password' => $this->password,
+        ];
 
-        // Outro código relacionado ao login...
+        if (Auth::attempt($credentials)) {
+            // O usuário está autenticado com sucesso
+            $this->redirectToDash = true;
+            session()->flash('message', 'Login bem-sucedido!');// Redirecionar para a página de painel após o login
+        } else {
+            session()->flash('error', 'Credenciais inválidas. Tente novamente.');
+        }
 
-        $this->redirectToDash = true;
     }
 
     // Método para redirecionar para a tela de signup
