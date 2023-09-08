@@ -42,6 +42,11 @@ class Signup extends Component
 
         Auth::login($user);
 
+        $this->request->name='';
+        $this->request->email='';
+        $this->request->password='';
+        $this->request->password_confirmation='';
+
         return redirect(RouteServiceProvider::HOME);
     }
 }
