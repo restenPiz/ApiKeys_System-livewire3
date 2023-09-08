@@ -37,8 +37,10 @@
 </head>
 <body>
     
-    {{$slot}}
 
+    <main id="content" role="main" class="main">
+        {{$slot}}
+    </main>
 
     {{--Inicio dos links do javascript--}}
         
@@ -46,6 +48,8 @@
 
     <!-- JS Front -->
     <script src="assets/js/theme.min.js"></script>
+    
+    <script src="assets/js/hs.theme-appearance.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>
