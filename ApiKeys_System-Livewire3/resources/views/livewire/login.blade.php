@@ -1,6 +1,8 @@
 <div>
     @if($redirectToSignUp)
         @livewire('signUp')
+    @elseif($redirectToDash)
+        @livewire('dashboard')
     @else
         <div class="position-fixed top-0 end-0 start-0 bg-img-start"
             style="height: 32rem; background-image: url(assets/svg/components/card-6.svg);">

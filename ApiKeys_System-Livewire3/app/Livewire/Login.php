@@ -10,17 +10,19 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 class Login extends Component
 {
     public $redirectToSignUp=false;
+    public $redirectToDash=false;
+    public LoginRequest $request;
     public function render()
     {
         return view('livewire.login')->layout('layouts.app');
     }
-    public function store(LoginRequest $request): RedirectResponse
+    public function store()
     {
-        $request->authenticate();
+        $this->request->authenticate();
 
-        $request->session()->regenerate();
+        $this->request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        $this->redirectToDash=true;
     }
     //*Metodo para redirecionar para a tela de signup
     public function signUp()
