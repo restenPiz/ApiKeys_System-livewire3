@@ -103,15 +103,6 @@
                         </div>
                         <!-- End Form -->
 
-                        <!-- Form Check -->
-                        <div class="form-check mb-4">
-                            <input class="form-check-input" wire:model="remember_token" type="checkbox" value="" id="termsCheckbox">
-                            <label class="form-check-label" for="termsCheckbox">
-                                Remember me
-                            </label>
-                        </div>
-                        <!-- End Form Check -->
-
                         <div class="d-grid">
                             <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
                         </div>
