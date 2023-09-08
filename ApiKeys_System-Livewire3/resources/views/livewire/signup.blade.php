@@ -57,8 +57,6 @@
                             <label class="form-label w-100" for="signupSrPassword" tabindex="0">
                                 <span class="d-flex justify-content-between align-items-center">
                                     <span>Password</span>
-                                    <a class="form-label-link mb-0"
-                                        href="authentication-reset-password-basic.html">Forgot Password?</a>
                                 </span>
                             </label>
 
@@ -78,11 +76,11 @@
                                 </a>
                             </div>
 
+                        </div>
+                        <div class="mb-4">
                             <label class="form-label w-100" for="signupSrPassword" tabindex="0">
                                 <span class="d-flex justify-content-between align-items-center">
                                     <span>Password Confirmation</span>
-                                    <a class="form-label-link mb-0"
-                                        href="authentication-reset-password-basic.html">Forgot Password?</a>
                                 </span>
                             </label>
                             <div class="input-group input-group-merge" data-hs-validation-validate-class>
