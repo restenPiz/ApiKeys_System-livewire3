@@ -11,6 +11,7 @@ use Livewire\Component;
 class Signup extends Component
 {
     public $name,$email,$password, $user;
+    public $redirectToDash=false;
     public $redirectToSignIn=false;
     public function render()
     {
@@ -39,6 +40,8 @@ class Signup extends Component
         event(new Registered($user));
 
         Auth::login($user);
+
+        $this->redirectToDash=true;
 
     }
 }

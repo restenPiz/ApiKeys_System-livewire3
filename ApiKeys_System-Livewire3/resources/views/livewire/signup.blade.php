@@ -2,6 +2,8 @@
 
     @if($redirectToSignIn)
         @livewire('login')
+    @elseif($redirectToDas)
+        @livewire('dashboard')
     @else
     {{-- Inicio do conteudo da pagina de registro --}}
 
