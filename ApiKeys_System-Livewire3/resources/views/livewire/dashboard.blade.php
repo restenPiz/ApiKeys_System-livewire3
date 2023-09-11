@@ -1,7 +1,5 @@
 <div>
 
-    @include('layouts.navigation')
-
     <main id="content" role="main" class="main">
         <div class="content container-fluid">
             <!-- Page Header -->
