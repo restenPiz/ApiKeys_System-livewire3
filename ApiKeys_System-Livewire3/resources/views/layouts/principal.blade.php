@@ -220,9 +220,9 @@
 
   
     <!-- ========== HEADER ========== -->
-  
+    <main>
         {{ $slot }}
-    
+    </main>
 
     {{-- Inicio dos links do javascript --}}
 
