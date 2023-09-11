@@ -221,11 +221,7 @@
   
     <!-- ========== HEADER ========== -->
   
-    @yield('content')
-    
-    <main id="content" role="main" class="main">
         {{ $slot }}
-    </main>
     
 
     {{-- Inicio dos links do javascript --}}
