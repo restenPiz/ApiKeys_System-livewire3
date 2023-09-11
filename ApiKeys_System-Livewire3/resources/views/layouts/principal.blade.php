@@ -217,15 +217,8 @@
 </head>
 
 <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl   footer-offset">
-
   
-    <!-- ========== HEADER ========== -->
-    <main>
-        {{ $slot }}
-    </main>
-
-    {{-- Inicio dos links do javascript --}}
-
+    {{ $slot }}
 
     <!-- JS Implementing Plugins -->
     <script src="assets/js/vendor.min.js"></script>
