@@ -221,10 +221,10 @@
   
     <!-- ========== HEADER ========== -->
   
-    @include('layouts.navigation')
+    @yield('content')
     
     <main id="content" role="main" class="main">
-                 {{ $slot }}
+        {{ $slot }}
     </main>
     
 

@@ -1,3 +1,6 @@
+@extends('layouts.principal')
+@section('content')
+
 <header id="header"
       class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-container navbar-bordered bg-white">
       <div class="navbar-nav-wrap">
@@ -1399,3 +1402,4 @@
       </div>
     </aside>
   
+@endsection
