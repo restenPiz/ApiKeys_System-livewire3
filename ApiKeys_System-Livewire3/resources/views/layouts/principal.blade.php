@@ -216,7 +216,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
+<body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl  footer-offset">
   
     {{ $slot }}
 

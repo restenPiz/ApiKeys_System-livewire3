@@ -933,7 +933,9 @@
 
     <!-- ========== MAIN CONTENT ========== -->
     <!-- Navbar Vertical -->
- <div class="navbar-vertical-container">
+
+    <aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered bg-white  ">
+        <div class="navbar-vertical-container">
             <div class="navbar-vertical-footer-offset">
                 <!-- Logo -->
 
@@ -1526,6 +1528,7 @@
                 <!-- End Footer -->
             </div>
         </div>
+    </aside>
 
 
     <main id="content" role="main" class="main">
