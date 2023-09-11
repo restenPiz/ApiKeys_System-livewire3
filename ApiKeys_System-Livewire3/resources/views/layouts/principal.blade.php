@@ -218,8 +218,6 @@
 
 <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl  footer-offset">
   
-    @yield('content')
-
     {{ $slot }}
 
     <!-- JS Implementing Plugins -->

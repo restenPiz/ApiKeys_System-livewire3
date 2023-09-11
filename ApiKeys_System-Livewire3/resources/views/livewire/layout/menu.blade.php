@@ -1,4 +1,4 @@
-@extends('layouts.principal')
+@extends('livewire.dashboard')
 
 @section('content')
 
