@@ -124,9 +124,6 @@
                 <div class="card-header card-header-content-sm-between">
                     <div class="mb-2 mb-sm-0">
                         <h4 class="card-header-title">API Keys</h4>
-                        <p class="card-text fs-5">Keys you have generated to connect with third-party clients or
-                            access
-                            the <a class="link" href="#">Front API.</a></p>
                     </div>
 
                     <div class="d-grid d-sm-flex justify-content-sm-between align-items-sm-center gap-2">
