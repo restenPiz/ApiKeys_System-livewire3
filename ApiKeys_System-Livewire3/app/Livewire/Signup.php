@@ -41,6 +41,7 @@ class Signup extends Component
 
         Auth::login($user);
 
+        //Redirecion para a view de dashboard
         $this->redirectToDash=true;
 
     }
