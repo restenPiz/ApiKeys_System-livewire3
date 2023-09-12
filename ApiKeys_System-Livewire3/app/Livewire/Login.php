@@ -29,7 +29,7 @@ class Login extends Component
         if (Auth::attempt($credentials)) {
             // O usuário está autenticado com sucesso
             $this->redirectToDash = true;
-            session()->flash('message', 'Login bem-sucedido!');// Redirecionar para a página de painel após o login
+            session()->flash('message', 'Login bem-sucedido!');
         } else {
             session()->flash('error', 'Credenciais inválidas. Tente novamente.');
         }
