@@ -12,6 +12,6 @@ class ApiKeys extends Model
     protected $table='apikey';
 
     protected $fillable=[
-        'Name','createdBy','ApiKey','Status'
+        'Name','CreatedBy','ApiKey','Status'
     ];
 }
