@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class ApiKeys extends Model
 {
     use HasFactory;
+
+    protected $table='apikey';
+
+    protected $fillable=[
+        'Name','createdBy','ApiKey','Status'
+    ];
 }
