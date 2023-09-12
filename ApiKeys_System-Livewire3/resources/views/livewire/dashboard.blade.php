@@ -8,11 +8,9 @@
                     <div class="col-sm mb-2 mb-sm-0">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb breadcrumb-no-gutter">
-                                <li class="breadcrumb-item"><a class="breadcrumb-link"
-                                        href="javascript:;">Pages</a>
+                                <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Pages</a>
                                 </li>
-                                <li class="breadcrumb-item"><a class="breadcrumb-link"
-                                        href="javascript:;">Account</a>
+                                <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Account</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">API Keys</li>
                             </ol>
@@ -139,8 +137,7 @@
                                     <span id="datatableCounter">0</span>
                                     Selected
                                 </span>
-                                <a class="btn btn-outline-danger btn-sm" href="javascript:;"><i
-                                        class="bi-trash"></i>
+                                <a class="btn btn-outline-danger btn-sm" href="javascript:;"><i class="bi-trash"></i>
                                     Delete</a>
                             </div>
                         </div>
@@ -290,7 +287,7 @@
                                 </td>
                             </tr>
 
-                            
+
                         </tbody>
                     </table>
                 </div>
@@ -306,8 +303,7 @@
                                 <!-- Select -->
                                 <div class="tom-select-custom">
                                     <select id="datatableEntries"
-                                        class="js-select form-select form-select-borderless w-auto"
-                                        autocomplete="off"
+                                        class="js-select form-select form-select-borderless w-auto" autocomplete="off"
                                         data-hs-tom-select-options='{
                       "searchInDropdown": false,
                       "hideSearch": true
