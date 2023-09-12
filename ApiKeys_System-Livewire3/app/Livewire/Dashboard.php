@@ -30,4 +30,8 @@ class Dashboard extends Component
 
         $table->save();
     }
+    public function modalOne()
+    {
+        $this->modalSave=true;
+    }
 }
