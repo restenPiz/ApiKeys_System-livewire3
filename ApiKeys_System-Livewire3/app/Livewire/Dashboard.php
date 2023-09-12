@@ -7,6 +7,8 @@ use Livewire\Component;
 
 class Dashboard extends Component
 {
+    //*Declaring the variables of the form
+    public $name,$createdby,$apikeys,$status;
     public function render()
     {
         $keys=ApiKeys::all();
