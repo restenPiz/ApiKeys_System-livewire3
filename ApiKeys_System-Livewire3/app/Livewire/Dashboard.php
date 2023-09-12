@@ -9,6 +9,10 @@ class Dashboard extends Component
 {
     //*Declaring the variables of the form
     public $name,$createdby,$apikeys,$status;
+
+    //*Inicio da variavel de modal
+    public $modalSave=false;
+
     public function render()
     {
         $keys=ApiKeys::all();
