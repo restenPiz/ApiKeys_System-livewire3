@@ -223,35 +223,38 @@
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td class="table-column-pe-0">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="apiKeyCheck1">
-                                        <label class="form-check-label" for="apiKeyCheck1"></label>
-                                    </div>
-                                </td>
-                                <td class="table-column-ps-0">Streamlab</td>
-                                <td>
-                                    <a class="d-flex align-items-center text-dark" href="#">
-                                        <div class="flex-shrink-0">
-                                            <div class="avatar avatar-xs avatar-circle">
-                                                <img class="avatar-img" src="assets/img/160x160/img9.jpg"
-                                                    alt="Image Description">
+
+                            @foreach ($keys as $key)
+                                <tr>
+                                    <td class="table-column-pe-0">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="apiKeyCheck1">
+                                            <label class="form-check-label" for="apiKeyCheck1"></label>
+                                        </div>
+                                    </td>
+                                    <td class="table-column-ps-0">{{$key->Name}}</td>
+                                    <td>
+                                        <a class="d-flex align-items-center text-dark" href="#">
+                                            <div class="flex-shrink-0">
+                                                <div class="avatar avatar-xs avatar-circle">
+                                                    <img class="avatar-img" src="assets/img/160x160/img9.jpg"
+                                                        alt="Image Description">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">
-                                            <span class="text-inherit">Christina Bersh</span>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <div class="input-group input-group-sm input-group-merge table-input-group">
-                                        <input id="apiKeyCode1" type="text" class="form-control" readonly
-                                            value="GFKBH23BR2H3R29HO2N3">
-                                        <a class="js-clipboard input-group-append input-group-text"
-                                            href="javascript:;" data-bs-toggle="tooltip" title="Copy to clipboard"
-                                            data-hs-clipboard-options='{
+                                            <div class="flex-grow-1 ms-3">
+                                                <span class="text-inherit">{{$key->CreatedBy}}</span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="input-group input-group-sm input-group-merge table-input-group">
+                                            <input id="apiKeyCode1" type="text" class="form-control" readonly
+                                                value="{{$key->ApiKey}}">
+                                            <a class="js-clipboard input-group-append input-group-text"
+                                                href="javascript:;" data-bs-toggle="tooltip"
+                                                title="Copy to clipboard"
+                                                data-hs-clipboard-options='{
                   "type": "tooltip",
                   "successText": "Copied!",
                   "contentTarget": "#apiKeyCode1",
@@ -259,28 +262,28 @@
                   "defaultClass": "bi-clipboard",
                   "successClass": "bi-check"
                  }'>
-                                            <i id="apiKeyCodeIcon1" class="bi-clipboard"></i>
-                                        </a>
-                                    </div>
-                                </td>
-                                <td><span class="legend-indicator bg-success"></span> Successful</td>
-                                <td>March 11, 2020</td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button type="button" class="btn btn-white btn-sm" id="apiKeyDropdown1"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            More <i class="bi-chevron-down ms-1"></i>
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-end"
-                                            aria-labelledby="apiKeyDropdown1">
-                                            <a class="dropdown-item" href="#">Edit</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item text-danger" href="#">Delete</a>
+                                                <i id="apiKeyCodeIcon1" class="bi-clipboard"></i>
+                                            </a>
                                         </div>
-                                    </div>
-                                </td>
-                            </tr>
-
+                                    </td>
+                                    <td><span class="legend-indicator bg-success"></span>{{$key->Status}}</td>
+                                    <td>{{$key->created_at}}</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-white btn-sm" id="apiKeyDropdown1"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                More <i class="bi-chevron-down ms-1"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="apiKeyDropdown1">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item text-danger" href="#">Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
 
                         </tbody>
                     </table>
