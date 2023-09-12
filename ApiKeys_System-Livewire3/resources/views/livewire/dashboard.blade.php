@@ -276,10 +276,7 @@
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end"
                                             aria-labelledby="apiKeyDropdown1">
-                                            <a class="dropdown-item" href="#">Rename</a>
-                                            <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal"
-                                                data-bs-target="#createAKIKeyModal">Regenerate Key</a>
-                                            <a class="dropdown-item" href="#">Disable</a>
+                                            <a class="dropdown-item" href="#">Edit</a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item text-danger" href="#">Delete</a>
                                         </div>
