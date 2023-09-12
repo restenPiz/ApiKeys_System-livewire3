@@ -15,4 +15,15 @@ class Dashboard extends Component
 
         return view('livewire.dashboard',compact('keys'))->layout('layouts.principal');
     }
+    public function save()
+    {
+        $table=new ApiKeys();
+
+        $table->Name=$this->name;
+        $table->CreatedBy=$this->createdby;
+        $table->Status=$this->status;
+        $table->ApiKeys=$this->apikeys;
+
+        $table->save();
+    }
 }
