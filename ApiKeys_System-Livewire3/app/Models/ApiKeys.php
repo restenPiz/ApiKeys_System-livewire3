@@ -9,7 +9,7 @@ class ApiKeys extends Model
 {
     use HasFactory;
 
-    protected $table='apikey';
+    protected $table='api_keys';
 
     protected $fillable=[
         'Name','CreatedBy','ApiKey','Status'
