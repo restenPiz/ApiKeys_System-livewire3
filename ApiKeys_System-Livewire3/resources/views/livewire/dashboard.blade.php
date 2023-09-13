@@ -351,10 +351,10 @@
                 <div class="modal-body">
                     <!-- Form -->
                     <form>
-                        <input type="text" class="form-control" placeholder="Name">
-                        <input type="text" class="form-control" placeholder="Created by">
-                        <input type="text" class="form-control" placeholder="API Key name">
-                        <select class="form-control">
+                        <input wire:model="Name" type="text" class="form-control" placeholder="Name">
+                        <input wire:model="CreatedBy" type="text" class="form-control" placeholder="Created by">
+                        <input wire:model="ApiKey" type="text" class="form-control" placeholder="API Key name">
+                        <select class="form-control" wire:model="Status">
                             <option value="Successful">Successful</option>
                             <option value="Disabled">Disabled</option>
                             <option value="Warnings">Warnings</option>
