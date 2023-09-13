@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\apiController\authController;
 use App\Http\Controllers\ProfileController;
 use App\Livewire\Login;
 use App\Livewire\Signup;
@@ -7,9 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 //!Inicio das rotas do meu sistema
 
-Route::get('/',Login::class)->name('login');
-Route::get('/signUp',Signup::class)->name('signUp');
-
+Route::get('/', [authController::class, 'login'])->name('login');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
