@@ -1541,7 +1541,7 @@
   </aside>
 
     <!-- Page Content -->
-    <main>
+    <main id="content" role="main" class="main">
         {{ $slot }}
     </main>
         
