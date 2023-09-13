@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 //!Inicio das rotas do meu sistema
 
 Route::get('/', [authController::class, 'login'])->name('login');
-Route::get('/register', [authController::class, 'register'])->name('register');
+Route::get('/register', [authController::class, 'register'])->name('register-page');
 
 
 Route::middleware('auth')->group(function () {
