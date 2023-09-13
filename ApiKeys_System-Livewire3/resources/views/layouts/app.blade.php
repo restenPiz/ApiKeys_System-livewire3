@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Mirrored from htmlstream.com/preview/front-dashboard-v2.1.1/api-keys.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jul 2023 19:57:31 GMT -->
-
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-  <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <!-- Title -->
-  <title>API Keys | Front - Admin &amp; Dashboard Template</title>
+  <title>{{ config('app.name', 'Laravel') }}</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico">
