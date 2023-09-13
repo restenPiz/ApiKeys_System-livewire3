@@ -29,7 +29,7 @@
                         <div class="text-center">
                             <div class="mb-5">
                                 <h1 class="display-5">Sign Out</h1>
-                                <p>Don't have an account ? <a href="#" wire:click="signIn" class="link">Sign in
+                                <p>Don't have an account ? <a href="/" class="link">Sign in
                                         here</a></p>
                             </div>
                         </div>
