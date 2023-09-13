@@ -34,17 +34,17 @@
                             </div>
                         </div>
 
-                        <form class="js-validate needs-validation" wire:submit="store" novalidate>
+                        <form class="js-validate needs-validation" action="" method="POST" novalidate>
                             <!-- Form -->
                             <div class="mb-4">
                                 <label class="form-label" for="signinSrEmail">Your name</label>
-                                <input type="text" class="form-control form-control-lg" wire:model="name"
+                                <input type="text" class="form-control form-control-lg" name="name"
                                     id="signinSrEmail" tabindex="1" placeholder="Your name" required>
                                 <span class="invalid-feedback">Please enter a valid name.</span>
                             </div>
                             <div class="mb-4">
                                 <label class="form-label" for="signinSrEmail">Your email</label>
-                                <input type="email" class="form-control form-control-lg" wire:model="email"
+                                <input type="email" class="form-control form-control-lg" name="email"
                                     id="signinSrEmail" tabindex="1" placeholder="email@address.com"
                                     aria-label="email@address.com" required>
                                 <span class="invalid-feedback">Please enter a valid email address.</span>
@@ -61,7 +61,7 @@
 
                                 <div class="input-group input-group-merge" data-hs-validation-validate-class>
                                     <input type="password" class="js-toggle-password form-control form-control-lg"
-                                        wire:model="password" id="signupSrPassword" placeholder="8+ characters required"
+                                        name="password" id="signupSrPassword" placeholder="8+ characters required"
                                         aria-label="8+ characters required" required minlength="8"
                                         data-hs-toggle-password-options='{
                             "target": "#changePassTarget",
@@ -84,7 +84,7 @@
                                 </label>
                                 <div class="input-group input-group-merge" data-hs-validation-validate-class>
                                     <input type="password" class="js-toggle-password form-control form-control-lg"
-                                        wire:model="password_confirmation" id="signupSrPassword"
+                                        name="password_confirmation" id="signupSrPassword"
                                         placeholder="8+ characters required" aria-label="8+ characters required" required
                                         minlength="8"
                                         data-hs-toggle-password-options='{
