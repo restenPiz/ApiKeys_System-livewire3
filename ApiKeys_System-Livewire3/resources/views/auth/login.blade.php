@@ -1,47 +1,92 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
-
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+@extends('pages.layouts.auth')
+@section('content')
+<div>
+    <div class="position-fixed top-0 end-0 start-0 bg-img-start"
+        style="height: 32rem; background-image: url(assets/svg/components/card-6.svg);">
+        <!-- Shape -->
+        <div class="shape shape-bottom zi-1">
+            <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                viewBox="0 0 1921 273">
+                <polygon fill="#fff" points="0,273 1921,273 1921,0 " />
+            </svg>
         </div>
+        <!-- End Shape -->
+    </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+    <!-- Content -->
+    <div class="container py-5 py-sm-7">
+        {{-- <a class="d-flex justify-content-center mb-5" href="index.html">
+                        <img class="zi-2" src="assets/svg/logos/logo.svg" alt="Image Description" style="width: 8rem;">
+                    </a> --}}</br></br></br></br>
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+        <div class="mx-auto" style="max-width: 30rem;">
+            <!-- Card -->
+            <div class="card card-lg mb-5">
+                <div class="card-body">
+                    <!-- Form -->
+                    <div class="text-center">
+                        <div class="mb-5">
+                            <h1 class="display-5">Sign in</h1>
+                            <p>Don't have an account yet? <a href="#" wire:click="signUp" class="link">Sign up
+                                    here</a></p>
+                        </div>
+                    </div>
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                    <form class="js-validate needs-validation" wire:submit="store" novalidate>
+                        <!-- Form -->
+                        <div class="mb-4">
+                            <label class="form-label" for="signinSrEmail">Your email</label>
+                            <input type="email" class="form-control form-control-lg" wire:model="email"
+                                id="signinSrEmail" tabindex="1" placeholder="email@address.com"
+                                aria-label="email@address.com" required>
+                            <span class="invalid-feedback">Please enter a valid email address.</span>
+                        </div>
+                        <!-- End Form -->
+
+                        <!-- Form -->
+                        <div class="mb-4">
+                            <label class="form-label w-100" for="signupSrPassword" tabindex="0">
+                                <span class="d-flex justify-content-between align-items-center">
+                                    <span>Password</span>
+                                    <a class="form-label-link mb-0"
+                                        href="authentication-reset-password-basic.html">Forgot Password?</a>
+                                </span>
+                            </label>
+
+                            <div class="input-group input-group-merge" data-hs-validation-validate-class>
+                                <input type="password" class="js-toggle-password form-control form-control-lg"
+                                    wire:model="password" id="signupSrPassword" placeholder="8+ characters required"
+                                    aria-label="8+ characters required" required minlength="8"
+                                    data-hs-toggle-password-options='{
+                            "target": "#changePassTarget",
+                            "defaultClass": "bi-eye-slash",
+                            "showClass": "bi-eye",
+                            "classChangeTarget": "#changePassIcon"
+                            }'>
+                                <a id="changePassTarget" class="input-group-append input-group-text"
+                                    href="javascript:;">
+                                    <i id="changePassIcon" class="bi-eye"></i>
+                                </a>
+                            </div>
+
+                            <span class="invalid-feedback">Please enter a valid password.</span>
+                        </div>
+                        <!-- End Form Check -->
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+                        </div>
+                    </form>
+                    <!-- End Form -->
+                </div>
+            </div>
+            <!-- End Card -->
+
         </div>
+    </div>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
+    {{-- Fim do metodo de redirecionamento --}}
 
-            <x-primary-button class="ml-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</div>
+@endsection
