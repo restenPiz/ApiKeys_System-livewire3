@@ -2,8 +2,6 @@
 
 use App\Http\Controllers\apiController\authController;
 use App\Http\Controllers\ProfileController;
-use App\Livewire\Login;
-use App\Livewire\Signup;
 use Illuminate\Support\Facades\Route;
 
 //!Inicio das rotas do meu sistema
