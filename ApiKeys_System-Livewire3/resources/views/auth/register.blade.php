@@ -1,52 +1,120 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+@extends('pages.layouts.auth')
+@section('content')
+    <div>
+        {{-- Inicio do conteudo da pagina de registro --}}
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        <div class="position-fixed top-0 end-0 start-0 bg-img-start"
+            style="height: 32rem; background-image: url(assets/svg/components/card-6.svg);">
+            <!-- Shape -->
+            <div class="shape shape-bottom zi-1">
+                <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    viewBox="0 0 1921 273">
+                    <polygon fill="#fff" points="0,273 1921,273 1921,0 " />
+                </svg>
+            </div>
+            <!-- End Shape -->
         </div>
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        <!-- Content -->
+        <div class="container py-5 py-sm-7">
+            {{-- <a class="d-flex justify-content-center mb-5" href="index.html">
+                        <img class="zi-2" src="assets/svg/logos/logo.svg" alt="Image Description" style="width: 8rem;">
+                    </a> --}}
+
+            <div class="mx-auto" style="max-width: 30rem;">
+                <!-- Card -->
+                <div class="card card-lg mb-5">
+                    <div class="card-body">
+                        <!-- Form -->
+                        <div class="text-center">
+                            <div class="mb-5">
+                                <h1 class="display-5">Sign Out</h1>
+                                <p>Don't have an account ? <a href="#" wire:click="signIn" class="link">Sign in
+                                        here</a></p>
+                            </div>
+                        </div>
+
+                        <form class="js-validate needs-validation" wire:submit="store" novalidate>
+                            <!-- Form -->
+                            <div class="mb-4">
+                                <label class="form-label" for="signinSrEmail">Your name</label>
+                                <input type="text" class="form-control form-control-lg" wire:model="name"
+                                    id="signinSrEmail" tabindex="1" placeholder="Your name" required>
+                                <span class="invalid-feedback">Please enter a valid name.</span>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="signinSrEmail">Your email</label>
+                                <input type="email" class="form-control form-control-lg" wire:model="email"
+                                    id="signinSrEmail" tabindex="1" placeholder="email@address.com"
+                                    aria-label="email@address.com" required>
+                                <span class="invalid-feedback">Please enter a valid email address.</span>
+                            </div>
+                            <!-- End Form -->
+
+                            <!-- Form -->
+                            <div class="mb-4">
+                                <label class="form-label w-100" for="signupSrPassword" tabindex="0">
+                                    <span class="d-flex justify-content-between align-items-center">
+                                        <span>Password</span>
+                                    </span>
+                                </label>
+
+                                <div class="input-group input-group-merge" data-hs-validation-validate-class>
+                                    <input type="password" class="js-toggle-password form-control form-control-lg"
+                                        wire:model="password" id="signupSrPassword" placeholder="8+ characters required"
+                                        aria-label="8+ characters required" required minlength="8"
+                                        data-hs-toggle-password-options='{
+                            "target": "#changePassTarget",
+                            "defaultClass": "bi-eye-slash",
+                            "showClass": "bi-eye",
+                            "classChangeTarget": "#changePassIcon"
+                            }'>
+                                    <a id="changePassTarget" class="input-group-append input-group-text"
+                                        href="javascript:;">
+                                        <i id="changePassIcon" class="bi-eye"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label w-100" for="signupSrPassword" tabindex="0">
+                                    <span class="d-flex justify-content-between align-items-center">
+                                        <span>Password Confirmation</span>
+                                    </span>
+                                </label>
+                                <div class="input-group input-group-merge" data-hs-validation-validate-class>
+                                    <input type="password" class="js-toggle-password form-control form-control-lg"
+                                        wire:model="password_confirmation" id="signupSrPassword"
+                                        placeholder="8+ characters required" aria-label="8+ characters required" required
+                                        minlength="8"
+                                        data-hs-toggle-password-options='{
+                            "target": "#changePassTarget",
+                            "defaultClass": "bi-eye-slash",
+                            "showClass": "bi-eye",
+                            "classChangeTarget": "#changePassIcon"
+                            }'>
+                                    <a id="changePassTarget" class="input-group-append input-group-text"
+                                        href="javascript:;">
+                                        <i id="changePassIcon" class="bi-eye"></i>
+                                    </a>
+                                </div>
+
+                                <span class="invalid-feedback">Please enter a valid password.</span>
+                            </div>
+                            <!-- End Form -->
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+                            </div>
+                        </form>
+                        <!-- End Form -->
+                    </div>
+                </div>
+                <!-- End Card -->
+
+            </div>
         </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ml-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+        {{-- Fim do conteudo da pagina de registro --}}
+    </div>
+@endsection
