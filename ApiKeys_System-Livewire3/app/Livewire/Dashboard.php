@@ -21,6 +21,7 @@ class Dashboard extends Component
     }
     public function save()
     {
+        //Referenciando o meu model
         $table=new ApiKeys();
 
         $table->Name=$this->name;
