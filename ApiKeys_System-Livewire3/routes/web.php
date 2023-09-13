@@ -9,9 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [authController::class, 'login'])->name('login');
 Route::get('/signOut', [authController::class, 'register'])->name('sign');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [dashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
