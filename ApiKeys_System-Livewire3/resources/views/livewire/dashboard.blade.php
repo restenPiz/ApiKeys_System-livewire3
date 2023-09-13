@@ -347,45 +347,49 @@
                 </div>
                 <!-- End Header -->
 
-                <!-- Body -->
-                <div class="modal-body">
-                    <!-- Form -->
-                    <form>
-                        <input wire:model="Name" type="text" class="form-control" placeholder="Name">
-                        <input wire:model="CreatedBy" type="text" class="form-control" placeholder="Created by">
-                        <input wire:model="ApiKey" type="text" class="form-control" placeholder="API Key name">
+                <form wire:submit.prevent="store">
+                    <!-- Body -->
+                    <div class="modal-body">
+                        <!-- Form -->
+
+                        <input wire:model="Name" type="text" class="form-control" placeholder="Name"></br>
+                        <input wire:model="CreatedBy" type="text" class="form-control"
+                            placeholder="Created by"></br>
+                        <input wire:model="ApiKey" type="text" class="form-control"
+                            placeholder="API Key name"></br>
                         <select class="form-control" wire:model="Status">
+                            <option selected>Choose a option</option>
                             <option value="Successful">Successful</option>
                             <option value="Disabled">Disabled</option>
                             <option value="Warnings">Warnings</option>
                         </select>
-                    </form>
-                    <!-- End Form -->
-                </div>
-                <!-- End Body -->
-
-                <!-- Footer -->
-                <div class="modal-footer">
-                    <div class="row align-items-sm-center flex-grow-1 mx-n2">
-                        <div class="col-sm mb-2 mb-sm-0">
-                            <p class="modal-footer-text">What is an API? <i class="bi-question-circle"
-                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title="API stands for application programming interface. It can be helpful to think of the API as a way for different apps to talk to one another."></i>
-                            </p>
-                        </div>
-                        <!-- End Col -->
-
-                        <div class="col-sm-auto">
-                            <div class="d-flex gap-3">
-                                <button type="button" class="btn btn-white" data-bs-dismiss="modal"
-                                    aria-label="Close">Cancel</button>
-                                <button type="button" class="btn btn-primary">Generate</button>
-                            </div>
-                        </div>
-                        <!-- End Col -->
+                        <!-- End Form -->
                     </div>
-                    <!-- End Row -->
-                </div>
+                    <!-- End Body -->
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <div class="row align-items-sm-center flex-grow-1 mx-n2">
+                            <div class="col-sm mb-2 mb-sm-0">
+                                <p class="modal-footer-text">What is an API? <i class="bi-question-circle"
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="API stands for application programming interface. It can be helpful to think of the API as a way for different apps to talk to one another."></i>
+                                </p>
+                            </div>
+                            <!-- End Col -->
+
+                            <div class="col-sm-auto">
+                                <div class="d-flex gap-3">
+                                    <button type="button" class="btn btn-white" data-bs-dismiss="modal"
+                                        aria-label="Close">Cancel</button>
+                                    <button type="button" class="btn btn-primary">Generate</button>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                </form>
                 <!-- End Footer -->
             </div>
         </div>
