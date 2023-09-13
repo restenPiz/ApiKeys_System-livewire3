@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [authController::class, 'login'])->name('login');
 Route::get('/register', [authController::class, 'register'])->name('register-page');
 
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
