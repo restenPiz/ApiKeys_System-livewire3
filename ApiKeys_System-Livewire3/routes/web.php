@@ -9,10 +9,8 @@ use Illuminate\Support\Facades\Route;
 //!Inicio das rotas do meu sistema
 
 Route::get('/', [authController::class, 'login'])->name('login');
+Route::get('/register', [authController::class, 'register'])->name('register');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
