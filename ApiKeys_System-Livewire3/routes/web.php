@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 //!Inicio das rotas do meu sistema
 
 Route::get('/', [authController::class, 'login'])->name('login');
-Route::get('/register', [authController::class, 'register'])->name('register-page');
+Route::get('/signOut', [authController::class, 'register'])->name('sign');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
