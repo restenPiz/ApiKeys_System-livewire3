@@ -32,7 +32,7 @@
                         </div>
                     </div>
 
-                    <form class="js-validate needs-validation" wire:submit="store" novalidate>
+                    <form class="js-validate needs-validation" action="{{route('register')}}" method="POST" novalidate>
                         <!-- Form -->
                         <div class="mb-4">
                             <label class="form-label" for="signinSrEmail">Your email</label>
