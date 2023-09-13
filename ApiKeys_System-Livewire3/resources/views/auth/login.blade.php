@@ -33,6 +33,7 @@
                     </div>
 
                     <form class="js-validate needs-validation" action="{{route('store')}}" method="POST" novalidate>
+                        @csrf
                         <!-- Form -->
                         <div class="mb-4">
                             <label class="form-label" for="signinSrEmail">Your email</label>
