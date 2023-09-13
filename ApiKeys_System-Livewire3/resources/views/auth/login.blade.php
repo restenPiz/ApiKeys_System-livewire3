@@ -37,7 +37,7 @@
                         <!-- Form -->
                         <div class="mb-4">
                             <label class="form-label" for="signinSrEmail">Your email</label>
-                            <input type="email" class="form-control form-control-lg" wire:model="email"
+                            <input type="email" class="form-control form-control-lg" name="email"
                                 id="signinSrEmail" tabindex="1" placeholder="email@address.com"
                                 aria-label="email@address.com" required>
                             <span class="invalid-feedback">Please enter a valid email address.</span>
@@ -56,7 +56,7 @@
 
                             <div class="input-group input-group-merge" data-hs-validation-validate-class>
                                 <input type="password" class="js-toggle-password form-control form-control-lg"
-                                    wire:model="password" id="signupSrPassword" placeholder="8+ characters required"
+                                    name="password" id="signupSrPassword" placeholder="8+ characters required"
                                     aria-label="8+ characters required" required minlength="8"
                                     data-hs-toggle-password-options='{
                             "target": "#changePassTarget",
@@ -75,7 +75,7 @@
                         <!-- End Form Check -->
 
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+                            <button type="submit" name="submit" class="btn btn-primary btn-lg">Sign in</button>
                         </div>
                     </form>
                     <!-- End Form -->
