@@ -234,34 +234,36 @@
                     <tbody>
 
                         {{-- Inicio do foreach do meu sistema --}}
-                        <tr>
-                            <td class="table-column-pe-0">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value=""
-                                        id="apiKeyCheck3">
-                                    <label class="form-check-label" for="apiKeyCheck3"></label>
-                                </div>
-                            </td>
-                            <td class="table-column-ps-0">FrontMail</td>
-                            <td>
-                                <a class="d-flex align-items-center text-dark" href="#">
-                                    <div class="flex-shrink-0">
-                                        <div class="avatar avatar-xs avatar-soft-primary avatar-circle">
-                                            <span class="avatar-initials">A</span>
+
+                        @foreach ($keys as $key)
+                            <tr>
+                                <td class="table-column-pe-0">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="apiKeyCheck3">
+                                        <label class="form-check-label" for="apiKeyCheck3"></label>
+                                    </div>
+                                </td>
+                                <td class="table-column-ps-0">{{$key->Name}}</td>
+                                <td>
+                                    <a class="d-flex align-items-center text-dark" href="#">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar avatar-xs avatar-soft-primary avatar-circle">
+                                                <span class="avatar-initials">A</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <span class="text-inherit">Anne Richard</span>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <div class="input-group input-group-sm input-group-merge table-input-group">
-                                    <input id="apiKeyCode3" type="text" class="form-control" readonly
-                                        value="X291ZNO1Z29BE12YZ1Z12">
-                                    <a class="js-clipboard input-group-append input-group-text" href="javascript:;"
-                                        data-bs-toggle="tooltip" title="Copy to clipboard"
-                                        data-hs-clipboard-options='{
+                                        <div class="flex-grow-1 ms-3">
+                                            <span class="text-inherit">{{$key->CreatedBy}}</span>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <div class="input-group input-group-sm input-group-merge table-input-group">
+                                        <input id="apiKeyCode3" type="text" class="form-control" readonly
+                                            value="X291ZNO1Z29BE12YZ1Z12">
+                                        <a class="js-clipboard input-group-append input-group-text"
+                                            href="javascript:;" data-bs-toggle="tooltip" title="Copy to clipboard"
+                                            data-hs-clipboard-options='{
                           "type": "tooltip",
                           "successText": "Copied!",
                           "contentTarget": "#apiKeyCode3",
@@ -269,29 +271,32 @@
                           "defaultClass": "bi-clipboard",
                           "successClass": "bi-check"
                          }'>
-                                        <i id="apiKeyCodeIcon3" class="bi-clipboard"></i>
-                                    </a>
-                                </div>
-                            </td>
-                            <td><span class="legend-indicator bg-success"></span> Successful</td>
-                            <td>February 20, 2020</td>
-                            <td>
-                                <div class="dropdown">
-                                    <button type="button" class="btn btn-white btn-sm" id="apiKeyDropdown3"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        More <i class="bi-chevron-down ms-1"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="apiKeyDropdown3">
-                                        <a class="dropdown-item" href="#">Rename</a>
-                                        <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal"
-                                            data-bs-target="#createAKIKeyModal">Regenerate Key</a>
-                                        <a class="dropdown-item" href="#">Disable</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item text-danger" href="#">Delete</a>
+                                            <i id="apiKeyCodeIcon3" class="bi-clipboard"></i>
+                                        </a>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>
+                                </td>
+                                <td><span class="legend-indicator bg-success"></span> Successful</td>
+                                <td>February 20, 2020</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-white btn-sm" id="apiKeyDropdown3"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            More <i class="bi-chevron-down ms-1"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-end"
+                                            aria-labelledby="apiKeyDropdown3">
+                                            <a class="dropdown-item" href="#">Rename</a>
+                                            <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal"
+                                                data-bs-target="#createAKIKeyModal">Regenerate Key</a>
+                                            <a class="dropdown-item" href="#">Disable</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item text-danger" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
+
                         {{-- Fim do foreach do meu sistema --}}
 
                     </tbody>
