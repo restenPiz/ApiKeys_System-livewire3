@@ -122,7 +122,7 @@
             </div>
         @endif
 
-        
+
         @if (session()->has('delete'))
             <div class="alert alert-danger">
                 {{ session('delete') }}
@@ -250,7 +250,7 @@
                                         <label class="form-check-label" for="apiKeyCheck3"></label>
                                     </div>
                                 </td>
-                                <td class="table-column-ps-0">{{$key->Name}}</td>
+                                <td class="table-column-ps-0">{{ $key->Name }}</td>
                                 <td>
                                     <a class="d-flex align-items-center text-dark" href="#">
                                         <div class="flex-shrink-0">
@@ -259,7 +259,7 @@
                                             </div>
                                         </div>
                                         <div class="flex-grow-1 ms-3">
-                                            <span class="text-inherit">{{$key->CreatedBy}}</span>
+                                            <span class="text-inherit">{{ $key->CreatedBy }}</span>
                                         </div>
                                     </a>
                                 </td>
@@ -281,14 +281,14 @@
                                         </a>
                                     </div>
                                 </td>
-                                @if($key->Status=="Successful")
-                                <td><span class="legend-indicator bg-success"></span> {{$key->Status}}</td>
-                                @elseif($key->Status=="Failed")
-                                <td><span class="legend-indicator bg-danger"></span> {{$key->Status}}</td>
+                                @if ($key->Status == 'Successful')
+                                    <td><span class="legend-indicator bg-success"></span> {{ $key->Status }}</td>
+                                @elseif($key->Status == 'Failed')
+                                    <td><span class="legend-indicator bg-danger"></span> {{ $key->Status }}</td>
                                 @else
-                                <td><span class="legend-indicator bg-warning"></span> {{$key->Status}}</td>
+                                    <td><span class="legend-indicator bg-warning"></span> {{ $key->Status }}</td>
                                 @endif
-                                <td>{{$key->created_at}}</td>
+                                <td>{{ $key->created_at }}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button type="button" class="btn btn-white btn-sm" id="apiKeyDropdown3"
@@ -297,9 +297,10 @@
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end"
                                             aria-labelledby="apiKeyDropdown3">
-                                            <button class="dropdown-item" >Edit</button>
+                                            <button class="dropdown-item">Edit</button>
                                             <div class="dropdown-divider"></div>
-                                            <button wire:click="delete({{ $key->id }})" class="dropdown-item text-danger" type="submit">Delete</button>
+                                            <button wire:click="delete({{ $key->id }})"
+                                                class="dropdown-item text-danger" type="submit">Delete</button>
                                         </div>
                                     </div>
                                 </td>
@@ -368,44 +369,46 @@
                 <!-- Header -->
                 <div class="modal-header">
                     <h4 class="modal-title" id="createAKIKeyModalLabel">Create API Key</h4>
-                    <button class="btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <!-- End Header -->
 
-                {{-- <form wire:submit.prevent="store"> --}}
-                <!-- Body -->
-                <div class="modal-body">
-                    <input wire:model="Name" type="text" id="Name" class="form-control" placeholder="Name"/></br>
-                    <input wire:model="CreatedBy" type="text" id="CreatedBy" class="form-control" placeholder="Created by"/></br>
-                    <input wire:model="ApiKey" type="text" id="ApiKey" class="form-control" placeholder="API Key name"/></br>
-                    <select class="form-control" wire:model="Status" id="Status">
-                        <option selected>Choose a option</option>
-                        <option value="Successful">Successful</option>
-                        <option value="Failed">Failed</option>
-                        <option value="Warning">Warning</option>
-                    </select>
-                    <!-- End Form -->
-                </div>
-                <!-- End Body -->
-
-                <!-- Footer -->
-                <div class="modal-footer">
-                    <div class="row align-items-sm-center flex-grow-1 mx-n2">
-                        <!-- End Col -->
-
-                        <div class="col-sm-auto">
-                            <div class="d-flex gap-3">
-                                <button type="button" class="btn btn-white" data-bs-dismiss="modal"
-                                    aria-label="Close">Cancel</button>
-                                <button type="submit" class="btn btn-primary" wire:click="store">Generate</button>
-                            </div>
-                        </div>
-                        <!-- End Col -->
+                <form wire:submit.prevent="store">
+                    <!-- Body -->
+                    <div class="modal-body">
+                        <input wire:model="Name" type="text" id="Name" class="form-control"
+                            placeholder="Name" /></br>
+                        <input wire:model="CreatedBy" type="text" id="CreatedBy" class="form-control"
+                            placeholder="Created by" /></br>
+                        <input wire:model="ApiKey" type="text" id="ApiKey" class="form-control"
+                            placeholder="API Key name" /></br>
+                        <select class="form-control" wire:model="Status" id="Status">
+                            <option selected>Choose a option</option>
+                            <option value="Successful">Successful</option>
+                            <option value="Failed">Failed</option>
+                            <option value="Warning">Warning</option>
+                        </select>
+                        <!-- End Form -->
                     </div>
-                    <!-- End Row -->
-                </div>
-                {{-- </form> --}}
+                    <!-- End Body -->
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <div class="row align-items-sm-center flex-grow-1 mx-n2">
+                            <!-- End Col -->
+
+                            <div class="col-sm-auto">
+                                <div class="d-flex gap-3">
+                                    <button type="button" class="btn btn-white" data-bs-dismiss="modal"
+                                        aria-label="Close">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Generate</button>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                </form>
                 <!-- End Footer -->
             </div>
         </div>
