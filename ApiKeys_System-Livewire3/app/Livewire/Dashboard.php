@@ -8,7 +8,7 @@ use Livewire\Component;
 class Dashboard extends Component
 {
     //*Declarando as variaveis
-    public $Name,$CreatedBy,$ApiKey,$Status;
+    public $id,$Name,$CreatedBy,$ApiKey,$Status;
 
     public function render()
     {
@@ -40,5 +40,14 @@ class Dashboard extends Component
         $this->CreatedBy='';
         $this->ApiKey='';
         $this->Status='';
+    }
+    //*Inicio do metodo para eliminar os dados
+    public function delete($id)
+    {
+        $key=ApiKeys::find($id);
+
+        $key->delete();
+
+        session()->flash('delete','The API KEY was deleted with successfuly');
     }
 }
