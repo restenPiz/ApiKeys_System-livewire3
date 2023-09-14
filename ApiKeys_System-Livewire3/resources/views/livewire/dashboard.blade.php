@@ -293,7 +293,7 @@
                                             aria-labelledby="apiKeyDropdown3">
                                             <button class="dropdown-item" >Edit</button>
                                             <div class="dropdown-divider"></div>
-                                            <button class="dropdown-item text-danger">Delete</button>
+                                            <button type="submit" wire:click="delete({{ $key->id }})" class="dropdown-item text-danger">Delete</button>
                                         </div>
                                     </div>
                                 </td>
