@@ -19,8 +19,7 @@
                 <!-- End Col -->
 
                 <div class="col-sm-auto">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#createAKIKeyModal">
+                    <button type="button" class="btn btn-primary" wire:click="openModal">
                         <i class="bi-plus me-1"></i> Create key
                     </button>
                 </div>
@@ -344,8 +343,8 @@
     <!-- End Content -->
 
     <!-- Create New API Key Modal -->
-    <div wire:ignore.self class="modal fade" id="createAKIKeyModal" tabindex="-1" aria-labelledby="createAKIKeyModalLabel"
-        role="dialog" aria-hidden="true">
+    <div class="modal fade" id="createAKIKeyModal" tabindex="-1" aria-labelledby="createAKIKeyModalLabel"
+    role="dialog" aria-hidden="true" wire:model="isModalOpen">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <!-- Header -->
