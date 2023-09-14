@@ -9,23 +9,10 @@ class Dashboard extends Component
 {
     //*Declarando as variaveis
     public $Name,$CreatedBy,$ApiKey,$Status;
-    public $isModalOpen=false;
 
     public function render()
     {
         return view('livewire.dashboard')->layout('layouts.app');
-    }
-    public function create()
-    {
-        $this->openModal();
-    }
-    public function openModal()
-    {
-        $this->isModalOpen=true;
-    }
-    public function closeModal()
-    {
-        $this->isModalOpen=false;
     }
     //*Inicio do metodo para salvar os dados
     public function store()
@@ -41,6 +28,6 @@ class Dashboard extends Component
 
         session()->flash('message','The apikey was added with successfuly');
 
-        $this->dispatchBrowserEvent('closeModal');
+        $this->dispatch('closeModal');
     }
 }
