@@ -376,10 +376,10 @@
                 {{-- <form wire:submit.prevent="store"> --}}
                 <!-- Body -->
                 <div class="modal-body">
-                    <input wire:model="Name" type="text" class="form-control" placeholder="Name"></br>
-                    <input wire:model="CreatedBy" type="text" class="form-control" placeholder="Created by"></br>
-                    <input wire:model="ApiKey" type="text" class="form-control" placeholder="API Key name"></br>
-                    <select class="form-control" wire:model="Status">
+                    <input wire:model="Name" type="text" id="Name" class="form-control" placeholder="Name"></br>
+                    <input wire:model="CreatedBy" type="text" id="CreatedBy" class="form-control" placeholder="Created by"></br>
+                    <input wire:model="ApiKey" type="text" id="ApiKey" class="form-control" placeholder="API Key name"></br>
+                    <select class="form-control" wire:model="Status" id="Status">
                         <option selected>Choose a option</option>
                         <option value="Successful">Successful</option>
                         <option value="Failed">Failed</option>
