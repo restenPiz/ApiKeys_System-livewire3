@@ -116,7 +116,7 @@
         </div>
         <!-- End Row -->
 
-        @if(session()->has('message'))
+        @if (session()->has('message'))
             <div class="alert alert-success">
                 {{ session('message') }}
             </div>
@@ -124,7 +124,7 @@
 
         <!-- Card -->
         <div class="card">
-            
+
             <!-- Header -->
             <div class="card-header card-header-content-sm-between">
                 <div class="mb-2 mb-sm-0">
@@ -194,7 +194,7 @@
 
             <!-- Table -->
             <div class="table-responsive datatable-custom">
-                
+
                 <table id="datatable"
                     class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
                     data-hs-datatables-options='{
@@ -233,6 +233,7 @@
 
                     <tbody>
 
+                        {{-- Inicio do foreach do meu sistema --}}
                         <tr>
                             <td class="table-column-pe-0">
                                 <div class="form-check">
@@ -291,6 +292,8 @@
                                 </div>
                             </td>
                         </tr>
+                        {{-- Fim do foreach do meu sistema --}}
+
                     </tbody>
                 </table>
             </div>
@@ -357,51 +360,49 @@
                 <!-- End Header -->
 
                 {{-- <form wire:submit.prevent="store"> --}}
-                    <!-- Body -->
-                    <div class="modal-body">
-                        <input wire:model="Name" type="text" class="form-control" placeholder="Name"></br>
-                        <input wire:model="CreatedBy" type="text" class="form-control"
-                            placeholder="Created by"></br>
-                        <input wire:model="ApiKey" type="text" class="form-control"
-                            placeholder="API Key name"></br>
-                        <select class="form-control" wire:model="Status">
-                            <option selected>Choose a option</option>
-                            <option value="Successful">Successful</option>
-                            <option value="Disabled">Disabled</option>
-                            <option value="Warnings">Warnings</option>
-                        </select>
-                        <!-- End Form -->
-                    </div>
-                    <!-- End Body -->
+                <!-- Body -->
+                <div class="modal-body">
+                    <input wire:model="Name" type="text" class="form-control" placeholder="Name"></br>
+                    <input wire:model="CreatedBy" type="text" class="form-control" placeholder="Created by"></br>
+                    <input wire:model="ApiKey" type="text" class="form-control" placeholder="API Key name"></br>
+                    <select class="form-control" wire:model="Status">
+                        <option selected>Choose a option</option>
+                        <option value="Successful">Successful</option>
+                        <option value="Disabled">Disabled</option>
+                        <option value="Warnings">Warnings</option>
+                    </select>
+                    <!-- End Form -->
+                </div>
+                <!-- End Body -->
 
-                    <!-- Footer -->
-                    <div class="modal-footer">
-                        <div class="row align-items-sm-center flex-grow-1 mx-n2">
-                            <!-- End Col -->
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <div class="row align-items-sm-center flex-grow-1 mx-n2">
+                        <!-- End Col -->
 
-                            <div class="col-sm-auto">
-                                <div class="d-flex gap-3">
-                                    <button type="button" class="btn btn-white" data-bs-dismiss="modal"
-                                        aria-label="Close">Cancel</button>
-                                    <button type="submit" class="btn btn-primary" wire:click="store">Generate</button>
-                                </div>
+                        <div class="col-sm-auto">
+                            <div class="d-flex gap-3">
+                                <button type="button" class="btn btn-white" data-bs-dismiss="modal"
+                                    aria-label="Close">Cancel</button>
+                                <button type="submit" class="btn btn-primary" wire:click="store">Generate</button>
                             </div>
-                            <!-- End Col -->
                         </div>
-                        <!-- End Row -->
+                        <!-- End Col -->
                     </div>
+                    <!-- End Row -->
+                </div>
                 {{-- </form> --}}
                 <!-- End Footer -->
             </div>
         </div>
     </div>
 
-    {{--Inicio da div contendo o script para fechar o modal--}}
+    {{-- Inicio da div contendo o script para fechar o modal --}}
     <script>
         window.addEventListener('closeModal', event => {
-            $("#createAKIKeyModal").modal('hide');                
+            $("#createAKIKeyModal").modal('hide');
         })
     </script>
-    {{--Fim da div--}}
+    {{-- Fim da div --}}
 
 </div>

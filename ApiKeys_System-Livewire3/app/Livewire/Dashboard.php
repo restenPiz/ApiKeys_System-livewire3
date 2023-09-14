@@ -12,7 +12,9 @@ class Dashboard extends Component
 
     public function render()
     {
-        return view('livewire.dashboard')->layout('layouts.app');
+        $keys=ApiKeys::all();
+
+        return view('livewire.dashboard',compact('keys'))->layout('layouts.app');
     }
     //*Inicio do metodo para salvar os dados
     public function store()
