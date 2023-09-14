@@ -353,7 +353,9 @@
 
                 <div class="dropdown-divider"></div>
 
-                <a class="dropdown-item" href="#">Sign out</a>
+                <form action="{{route('logout')}}" method="GET">
+                  <button type="submit" class="dropdown-item">Sign out</button>
+                </form>
               </div>
             </div>
             <!-- End Account -->
