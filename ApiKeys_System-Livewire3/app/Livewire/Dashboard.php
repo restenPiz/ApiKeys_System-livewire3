@@ -9,7 +9,7 @@ class Dashboard extends Component
 {
     //*Declarando as variaveis
     public $Name,$CreatedBy,$ApiKey,$Status;
-    public $isModalOpen=0;
+    public $isModalOpen=false;
 
     public function render()
     {
@@ -23,6 +23,7 @@ class Dashboard extends Component
     {
         $this->isModalOpen=true;
     }
+    //*Inicio do metodo para salvar os dados
     public function store()
     {
         $table=new ApiKeys();
@@ -33,5 +34,7 @@ class Dashboard extends Component
         $table->Status=$this->Status;
 
         $table->save();
+
+        $this->isModalOpen=false;
     }
 }
