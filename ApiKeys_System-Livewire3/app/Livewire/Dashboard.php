@@ -23,6 +23,10 @@ class Dashboard extends Component
     {
         $this->isModalOpen=true;
     }
+    public function closeModal()
+    {
+        $this->isModalOpen=false;
+    }
     //*Inicio do metodo para salvar os dados
     public function store()
     {
@@ -35,6 +39,6 @@ class Dashboard extends Component
 
         $table->save();
 
-        $this->isModalOpen=false;
+        $this->closeModal();
     }
 }
