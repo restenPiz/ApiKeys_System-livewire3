@@ -19,7 +19,8 @@
                 <!-- End Col -->
 
                 <div class="col-sm-auto">
-                    <button type="button" class="btn btn-primary" wire:click="openModal">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#createAKIKeyModal">
                         <i class="bi-plus me-1"></i> Create key
                     </button>
                 </div>
@@ -344,7 +345,7 @@
 
     <!-- Create New API Key Modal -->
     <div class="modal fade" id="createAKIKeyModal" tabindex="-1" aria-labelledby="createAKIKeyModalLabel"
-    role="dialog" aria-hidden="true" wire:model="isModalOpen">
+        role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <!-- Header -->
@@ -397,9 +398,9 @@
 
     {{--Inicio da div contendo o script para fechar o modal--}}
     <script>
-        Livewire.on('closeModal', () => {
-            $('#createAKIKeyModal').modal('hide');
-        });
+        window.addEventListener('closeModal', event => {
+            $("#createAKIKeyModal").modal('hide');                
+        })
     </script>
     {{--Fim da div--}}
 
