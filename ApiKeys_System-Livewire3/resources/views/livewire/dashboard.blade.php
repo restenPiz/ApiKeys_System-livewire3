@@ -375,7 +375,7 @@
                                 <div class="d-flex gap-3">
                                     <button type="button" class="btn btn-white" data-bs-dismiss="modal"
                                         aria-label="Close">Cancel</button>
-                                    <button type="submit" class="btn btn-primary">Generate</button>
+                                    <button type="submit" class="btn btn-primary" wire:click="store">Generate</button>
                                 </div>
                             </div>
                             <!-- End Col -->
