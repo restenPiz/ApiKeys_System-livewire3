@@ -39,6 +39,8 @@ class Dashboard extends Component
 
         $table->save();
 
+        session()->flash('message','The apikey was added with successfuly');
+
         $this->closeModal();
     }
 }

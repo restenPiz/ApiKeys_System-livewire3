@@ -118,6 +118,11 @@
 
         <!-- Card -->
         <div class="card">
+            @if(session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+            @endif
             <!-- Header -->
             <div class="card-header card-header-content-sm-between">
                 <div class="mb-2 mb-sm-0">
@@ -187,6 +192,7 @@
 
             <!-- Table -->
             <div class="table-responsive datatable-custom">
+                
                 <table id="datatable"
                     class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
                     data-hs-datatables-options='{
