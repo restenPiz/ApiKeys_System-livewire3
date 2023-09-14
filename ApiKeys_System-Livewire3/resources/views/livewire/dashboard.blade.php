@@ -275,14 +275,14 @@
                                         </a>
                                     </div>
                                 </td>
-                                @if($key->Status==Successful)
+                                @if($key->Status=="Successful")
                                 <td><span class="legend-indicator bg-success"></span> {{$key->Status}}</td>
-                                @elseif()
-                                <td><span class="legend-indicator bg-success"></span> {{$key->Status}}</td>
+                                @elseif($key->Status=="Failed")
+                                <td><span class="legend-indicator bg-danger"></span> {{$key->Status}}</td>
                                 @else
-                                <td><span class="legend-indicator bg-success"></span> {{$key->Status}}</td>
+                                <td><span class="legend-indicator bg-warning"></span> {{$key->Status}}</td>
                                 @endif
-                                <td>February 20, 2020</td>
+                                <td>{{$key->created_at}}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button type="button" class="btn btn-white btn-sm" id="apiKeyDropdown3"
@@ -379,8 +379,8 @@
                     <select class="form-control" wire:model="Status">
                         <option selected>Choose a option</option>
                         <option value="Successful">Successful</option>
-                        <option value="Disabled">Disabled</option>
-                        <option value="Warnings">Warnings</option>
+                        <option value="Failed">Failed</option>
+                        <option value="Warning">Warning</option>
                     </select>
                     <!-- End Form -->
                 </div>

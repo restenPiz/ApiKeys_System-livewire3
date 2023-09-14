@@ -30,6 +30,15 @@ class Dashboard extends Component
 
         session()->flash('message','The apikey was added with successfuly');
 
+        $this->clearInputs();
         $this->dispatch('closeModal');
+    }
+    //*Inicio do metodo para limpar os inputs
+    public function clearInputs()
+    {
+        $this->Name='';
+        $this->CreatedBy='';
+        $this->ApiKey='';
+        $this->Status='';
     }
 }
