@@ -348,7 +348,7 @@
                 </div>
                 <!-- End Header -->
 
-                <form wire:submit.prevent="store">
+                {{-- <form wire:submit.prevent="store"> --}}
                     <!-- Body -->
                     <div class="modal-body">
                         <input wire:model="Name" type="text" class="form-control" placeholder="Name"></br>
@@ -382,7 +382,7 @@
                         </div>
                         <!-- End Row -->
                     </div>
-                </form>
+                {{-- </form> --}}
                 <!-- End Footer -->
             </div>
         </div>
