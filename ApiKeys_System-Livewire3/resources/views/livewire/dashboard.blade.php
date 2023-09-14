@@ -291,12 +291,9 @@
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end"
                                             aria-labelledby="apiKeyDropdown3">
-                                            <a class="dropdown-item" href="#">Rename</a>
-                                            <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal"
-                                                data-bs-target="#createAKIKeyModal">Regenerate Key</a>
-                                            <a class="dropdown-item" href="#">Disable</a>
+                                            <button class="dropdown-item" >Edit</button>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item text-danger" href="#">Delete</a>
+                                            <button class="dropdown-item text-danger">Delete</button>
                                         </div>
                                     </div>
                                 </td>
@@ -365,7 +362,7 @@
                 <!-- Header -->
                 <div class="modal-header">
                     <h4 class="modal-title" id="createAKIKeyModalLabel">Create API Key</h4>
-                    <button wire:click="create" class="btn-close" data-bs-dismiss="modal"
+                    <button class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <!-- End Header -->
