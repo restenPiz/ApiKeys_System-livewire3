@@ -41,6 +41,6 @@ class Dashboard extends Component
 
         session()->flash('message','The apikey was added with successfuly');
 
-        $this->closeModal();
+        $this->emit('closeModal');
     }
 }

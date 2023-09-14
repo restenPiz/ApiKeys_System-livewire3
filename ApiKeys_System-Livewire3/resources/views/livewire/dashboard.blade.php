@@ -396,4 +396,12 @@
         </div>
     </div>
 
+    {{--Inicio da div contendo o script para fechar o modal--}}
+    <script>
+        Livewire.on('closeModal', () => {
+            $('#createAKIKeyModal').modal('hide');
+        });
+    </script>
+    {{--Fim da div--}}
+
 </div>
