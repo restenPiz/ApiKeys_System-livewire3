@@ -122,12 +122,12 @@
             </div>
         @endif
 
-        @if(session()->has('delete'))
+        
+        @if (session()->has('delete'))
             <div class="alert alert-danger">
                 {{ session('delete') }}
             </div>
         @endif
-
         <!-- Card -->
         <div class="card">
 
