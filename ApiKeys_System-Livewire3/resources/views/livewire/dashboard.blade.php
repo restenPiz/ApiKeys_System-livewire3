@@ -275,7 +275,13 @@
                                         </a>
                                     </div>
                                 </td>
-                                <td><span class="legend-indicator bg-success"></span> Successful</td>
+                                @if($key->Status==Successful)
+                                <td><span class="legend-indicator bg-success"></span> {{$key->Status}}</td>
+                                @elseif()
+                                <td><span class="legend-indicator bg-success"></span> {{$key->Status}}</td>
+                                @else
+                                <td><span class="legend-indicator bg-success"></span> {{$key->Status}}</td>
+                                @endif
                                 <td>February 20, 2020</td>
                                 <td>
                                     <div class="dropdown">
