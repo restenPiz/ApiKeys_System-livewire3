@@ -300,7 +300,7 @@
                                             <button class="dropdown-item">Edit</button>
                                             <div class="dropdown-divider"></div>
                                             <button wire:click="delete({{ $key->id }})"
-                                                class="dropdown-item text-danger" type="submit">Delete</button>
+                                                class="dropdown-item text-danger" type="button">Delete</button>
                                         </div>
                                     </div>
                                 </td>

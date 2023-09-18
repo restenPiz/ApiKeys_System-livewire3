@@ -13,6 +13,8 @@ class Dashboard extends Component
     public function render()
     {
         $this->dispatch('show-temp-alert');
+        
+        $this->dispatch('closeModal');
 
         return view('livewire.dashboard',[
             'keys' => ApiKeys::all(),
@@ -53,7 +55,7 @@ class Dashboard extends Component
         $key->delete();
 
         session()->flash('delete','The api key was deleted with successfuly');
-        
+
         $this->dispatch('show-temp-alert');
     }
 }
