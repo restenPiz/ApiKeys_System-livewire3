@@ -46,12 +46,13 @@ class Dashboard extends Component
     //*Inicio do metodo para eliminar os dados
     public function delete($id)
     {
-        $key=ApiKeys::find($id);
+        // $key=ApiKeys::find($id);
 
-        $key->delete();
+        // $key->delete();
 
-        session()->flash('delete','The api key was deleted with successfuly');
+        // session()->flash('delete','The api key was deleted with successfuly');
 
-        $this->dispatch('show-temp-alert');
+        // $this->dispatch('show-temp-alert');
+        dd($id);
     }
 }
