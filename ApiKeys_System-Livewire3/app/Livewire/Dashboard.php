@@ -53,7 +53,7 @@ class Dashboard extends Component
         $key->delete();
 
         session()->flash('delete','The api key was deleted with successfuly');
-        session()->save();
+        
         $this->dispatch('show-temp-alert');
     }
 }
