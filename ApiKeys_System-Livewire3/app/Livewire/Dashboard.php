@@ -12,6 +12,8 @@ class Dashboard extends Component
 
     public function render()
     {
+        $this->dispatchBrowserEvent('show-temp-alert');
+        
         return view('livewire.dashboard',[
             'keys' => ApiKeys::all(),
         ])->layout('layouts.app');  
@@ -33,6 +35,7 @@ class Dashboard extends Component
 
         $this->clearInputs();
         $this->dispatch('closeModal');
+        $this->dispatchBrowserEvent('show-temp-alert');
     }
     //*Inicio do metodo para limpar os inputs
     public function clearInputs()
@@ -51,5 +54,6 @@ class Dashboard extends Component
 
         session()->flash('delete','The api key was deleted with successfuly');
         session()->save();
+        $this->dispatchBrowserEvent('show-temp-alert');
     }
 }
