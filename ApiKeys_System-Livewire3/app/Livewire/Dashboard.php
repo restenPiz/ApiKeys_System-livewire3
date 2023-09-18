@@ -14,7 +14,7 @@ class Dashboard extends Component
     {
         return view('livewire.dashboard',[
             'keys' => ApiKeys::all(),
-        ])->layout('layouts.app');
+        ])->layout('layouts.app');  
     }
     //*Inicio do metodo para salvar os dados
     public function store()
@@ -51,8 +51,5 @@ class Dashboard extends Component
 
         session()->flash('delete','The api key was deleted with successfuly');
         session()->save();
-
-        
-        $this->dispatch('closeModal');
     }
 }
