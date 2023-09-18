@@ -4,21 +4,17 @@ namespace App\Livewire;
 
 use App\Models\ApiKeys;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Dashboard extends Component
 {
     //*Declarando as variaveis
     public $id,$Name,$CreatedBy,$ApiKey,$Status;
-
     public function render()
     {
-        $this->dispatch('show-temp-alert');
-        
-        $this->dispatch('closeModal');
+        $keys=ApiKeys::all();
 
-        return view('livewire.dashboard',[
-            'keys' => ApiKeys::all(),
-        ])->layout('layouts.app');  
+        return view('livewire.dashboard',compact('keys'))->layout('layouts.app');  
     }
     //*Inicio do metodo para salvar os dados
     public function store()

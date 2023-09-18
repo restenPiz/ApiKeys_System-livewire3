@@ -115,7 +115,7 @@
             <!-- End Col -->
         </div>
         <!-- End Row -->
-
+{{-- 
         @if (session()->has('message'))
             <div class="alert alert-success">
                 {{ session('message') }}
@@ -127,7 +127,7 @@
             <div class="alert alert-danger">
                 {{ session('delete') }}
             </div>
-        @endif
+        @endif --}}
         <!-- Card -->
         <div class="card">
 
@@ -300,7 +300,7 @@
                                             <button class="dropdown-item">Edit</button>
                                             <div class="dropdown-divider"></div>
                                             <button wire:click="delete({{ $key->id }})"
-                                                class="dropdown-item text-danger" type="button">Delete</button>
+                                                class="dropdown-item text-danger">Delete</button>
                                         </div>
                                     </div>
                                 </td>
