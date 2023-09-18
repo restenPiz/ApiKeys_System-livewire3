@@ -295,11 +295,11 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             More <i class="bi-chevron-down ms-1"></i>
                                         </button>
-                                        <div class="dropdown-menu dropdown-menu-end"
+                                        <div wire:ignore.self class="dropdown-menu dropdown-menu-end"
                                             aria-labelledby="apiKeyDropdown3">
                                             <button class="dropdown-item">Edit</button>
                                             <div class="dropdown-divider"></div>
-                                            <button wire:click="delete({{ $key->id }})"
+                                            <button wire:click:prevent="delete({{ $key->id }})"
                                                 class="dropdown-item text-danger">Delete</button>
                                         </div>
                                     </div>
@@ -373,7 +373,7 @@
                 </div>
                 <!-- End Header -->
 
-                <form wire:submit.prevent="store">
+                <form wire:submit="store">
                     <!-- Body -->
                     <div class="modal-body">
                         <input wire:model="Name" type="text" id="Name" class="form-control"
