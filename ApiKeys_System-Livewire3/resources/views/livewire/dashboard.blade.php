@@ -297,7 +297,7 @@
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end"
                                             aria-labelledby="apiKeyDropdown3">
-                                            <button class="dropdown-item">Edit</button>
+                                            <button class="dropdown-item" wire:click="eliminar({{ $key->id }})">Edit</button>
                                             <div class="dropdown-divider"></div>
                                             <button wire:click="eliminar({{ $key->id }})" class="dropdown-item text-danger">Delete</button>
                                         </div>

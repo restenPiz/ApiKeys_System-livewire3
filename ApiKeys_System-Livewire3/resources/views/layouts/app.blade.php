@@ -132,6 +132,10 @@
 
 <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl   footer-offset">
 
+  <script src="assets/js/hs.theme-appearance.js"></script>
+
+  <script src="assets/vendor/hs-navbar-vertical-aside/dist/hs-navbar-vertical-aside-mini-cache.js"></script>
+
   <!-- ========== HEADER ========== -->
 
   <header id="header"
@@ -2860,11 +2864,6 @@
 
   <!-- JS Front -->
   <script src="assets/js/theme.min.js"></script>
-
-  <script src="assets/js/hs.theme-appearance.js"></script>
-
-  <script src="assets/vendor/hs-navbar-vertical-aside/dist/hs-navbar-vertical-aside-mini-cache.js"></script>
-
 
   <!-- JS Plugins Init. -->
   <script>
