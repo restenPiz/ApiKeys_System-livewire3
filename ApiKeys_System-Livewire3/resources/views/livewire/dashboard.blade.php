@@ -289,22 +289,22 @@
                                     <td><span class="legend-indicator bg-warning"></span> {{ $key->Status }}</td>
                                 @endif
                                 <td>{{ $key->created_at }}</td>
-                                
+                                {{--Inicio do dropdown contendo os butoes--}}
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-white btn-sm" id="apiKeyDropdown3"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            More <i class="bi-chevron-down ms-1"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-end"
+                                            aria-labelledby="apiKeyDropdown3">
+                                            <button type="submit" class="dropdown-item" wire:click="eliminar({{ $keys->id }})">Edit</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button wire:click="eliminar({{ $keys->id }})" class="dropdown-item text-danger">Delete</button>
+                                        </div>
+                                    </div>
+                                </td>
                         @endforeach
-                        <td>
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-white btn-sm" id="apiKeyDropdown3"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    More <i class="bi-chevron-down ms-1"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-end"
-                                    aria-labelledby="apiKeyDropdown3">
-                                    <button type="submit" class="dropdown-item" wire:click="eliminar({{ $keys->id }})">Edit</button>
-                                    <div class="dropdown-divider"></div>
-                                    <button wire:click="eliminar({{ $keys->id }})" class="dropdown-item text-danger">Delete</button>
-                                </div>
-                            </div>
-                        </td>
                     </tr>
 
                         {{-- Fim do foreach do meu sistema --}}
