@@ -44,7 +44,7 @@ class Dashboard extends Component
         $this->Status='';
     }
     //*Inicio do metodo para eliminar os dados
-    public function delete($id)
+    public function eliminar($id)
     {
         // $key=ApiKeys::find($id);
 

@@ -132,10 +132,6 @@
 
 <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl   footer-offset">
 
-  <script src="assets/js/hs.theme-appearance.js"></script>
-
-  <script src="assets/vendor/hs-navbar-vertical-aside/dist/hs-navbar-vertical-aside-mini-cache.js"></script>
-
   <!-- ========== HEADER ========== -->
 
   <header id="header"
@@ -2865,6 +2861,11 @@
   <!-- JS Front -->
   <script src="assets/js/theme.min.js"></script>
 
+  <script src="assets/js/hs.theme-appearance.js"></script>
+
+  <script src="assets/vendor/hs-navbar-vertical-aside/dist/hs-navbar-vertical-aside-mini-cache.js"></script>
+
+
   <!-- JS Plugins Init. -->
   <script>
     $(document).on('ready', function () {
@@ -2934,24 +2935,6 @@
 
         datatable.column(targetColumnIndex).search(elVal).draw();
       });
-    });
-  </script>
-
-  <script>
-    require('alpinejs');
-
-    document.addEventListener('livewire:load', function () {
-        Livewire.on('show-temp-alert', function () {
-            const alert = document.querySelector('.alert');
-            
-            if (alert) {
-                alert.style.display = 'block';
-
-                setTimeout(function () {
-                    alert.style.display = 'none';
-                }, 5000); // Fechar o alerta após 5 segundos
-            }
-        });
     });
   </script>
 
